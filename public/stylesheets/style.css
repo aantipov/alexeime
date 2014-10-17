@@ -1,8 +1,57 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 18px 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.4;
+}
+
+h1 {
+    margin: 0 0 30px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
 }
 
 a {
-  color: #00B7FF;
+    color: #428bca;
+    text-decoration: none;
+}
+
+section {
+    width: 800px;
+    margin: 50px auto 0;
+    clear: both;
+}
+
+.about img {
+    height: 200px;
+    width: auto;
+    float: right;
+}
+
+.social p, .contact p {
+    padding: 3px 0;
+}
+
+p.link {
+    color: #428bca;
+}
+
+.footer {
+    padding-top: 15px;
+    color: #777;
+    width: 800px;
+    margin: 70px auto;
+    border-top: 1px solid #e5e5e5;
 }
