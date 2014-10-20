@@ -48,6 +48,10 @@ p.link {
     color: #428bca;
 }
 
+.fa {
+    padding-right: 8px;
+}
+
 .footer {
     padding-top: 15px;
     color: #777;
