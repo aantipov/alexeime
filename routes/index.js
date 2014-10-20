@@ -8,21 +8,7 @@ router.get('/', function (req, res) {
 
 // 301 redirect for old pages.
 router.get('*', function (req, res, next) {
-  switch (req.url) {
-    case '/portfolio':
-    case '/portfolio/vgexpress':
-    case '/portfolio/callcenter':
-    case '/portfolio/shevyakovacom':
-    case '/portfolio/calcwardrobe':
-    case '/oplata':
-    case '/demo/calc':
-    case '/oplata/successpay':
-    case '/oplata/failpay':
-      res.redirect(301, '/');
-      break;
-    default:
-      next();
-  }
+  res.redirect(301, '/');
 });
 
 module.exports = router;
