@@ -1,24 +1,21 @@
 body {
-    font: 18px 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+    /*font: 18px 'PT Serif', Georgia, Times, 'Times New Roman', serif;*/
+    font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     line-height: 1.4;
     color: #333333;
 }
 
 h1 {
     margin: 0 0 30px;
-}
-
-h2 {
-    margin: 20px 0 10px;
-}
-
-h1 {
     font-size: 50px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
+    letter-spacing: -0.5px;
 }
 
 h2 {
+    margin: 0 0 10px;
     font-size: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
@@ -31,7 +28,7 @@ a {
 
 section {
     width: 800px;
-    margin: 50px auto 0;
+    margin: 20px auto 0;
     clear: both;
 }
 
@@ -39,6 +36,10 @@ section {
     height: 200px;
     width: auto;
     float: right;
+}
+
+.about p {
+    line-height: 1.55;
 }
 
 .social p, .contact p {
@@ -57,6 +58,6 @@ p.link {
     padding-top: 15px;
     color: #777;
     width: 800px;
-    margin: 70px auto;
+    margin: 70px auto 30px;
     border-top: 1px solid #e5e5e5;
 }
