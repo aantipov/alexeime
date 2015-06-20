@@ -36,7 +36,6 @@ a {
 
 a:hover {
     color: #23527c;
-    text-decoration: underline;
 }
 
 section {
@@ -68,6 +67,8 @@ p.link {
 
 .fa {
     padding-right: 8px;
+    position: relative;
+    top: 5px;
 }
 
 .footer {
