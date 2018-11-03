@@ -4,6 +4,7 @@
 /.build
 /app/components/*/node_modules
 /settings/.environment
+/public/index.html
 
 # WebStorm Configuration
 .idea
