@@ -30,12 +30,13 @@ h2 {
 }
 
 a {
-    color: #428bca;
+    color: #3f6aa7;
     text-decoration: none;
 }
 
 a:hover {
     color: #23527c;
+    text-decoration: underline;
 }
 
 section {
@@ -43,10 +44,6 @@ section {
     margin: 40px auto 0;
     clear: both;
 }
-
-/*section.social {
-    margin: 0 auto;
-}*/
 
 .about-wrapper {
     padding: 0 20px 10px 0;
@@ -61,10 +58,6 @@ section {
     margin: 0;
 }
 
-p.link {
-    color: #428bca;
-}
-
 .fa {
     padding-right: 8px;
     position: relative;
@@ -72,7 +65,7 @@ p.link {
 }
 
 .footer {
-    color: #777;
+    color: #636363;
     max-width: 800px;
     margin: 70px auto 30px;
     border-top: 1px solid #e5e5e5;
