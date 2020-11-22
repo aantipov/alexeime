@@ -7,7 +7,7 @@
   "scripts": {
     "build": "pug -o ./public ./views/index.pug",
     "build:dev": "pug -P -w -o ./public ./views/index.pug",
-    "serve": "http-server -p 3000"
+    "serve": "http-server -p 3002"
   },
   "dependencies": {},
   "devDependencies": {
