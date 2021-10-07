@@ -1,19 +1,19 @@
 {
-  "name": "alexeime",
+  "name": "alexei.me",
   "version": "1.0.0",
-  "description": "Alexey Antipov. Personal website",
   "private": true,
-  "engine-strict": true,
+  "description": "personal website",
   "scripts": {
-    "build": "pug -o ./public ./views/index.pug",
-    "build:dev": "pug -P -w -o ./public ./views/index.pug",
-    "serve": "http-server -p 3002"
+    "dev": "vitepress",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
   },
-  "dependencies": {},
+  "author": "Alexey Antipov",
   "devDependencies": {
-    "http-server": "^0.11.1",
-    "netlify-cli": "^2.2.0",
-    "pug": "^3.0.1",
-    "pug-cli": "^1.0.0-alpha6"
+    "@tailwindcss/typography": "^0.4.1",
+    "vitepress": "^0.19.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.16"
   }
 }
