@@ -37,7 +37,7 @@ module.exports = {
       "meta",
       {
         name: "copyright",
-        content: "2009-2020, Alexey Antipov",
+        content: "2009-2021, Alexey Antipov",
       },
     ],
     [

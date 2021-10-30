@@ -9,7 +9,7 @@
         Love building and trying new things.
       </div>
       <div>
-        <img src="/myphoto.jpg" alt="my image" />
+        <img src="./myphoto.jpg" alt="my image" />
       </div>
     </div>
 
@@ -48,10 +48,14 @@
     </section>
 
     <div class="footer">
-      <p>© 2009-2021 Alexey Antipov</p>
+      <p>© 2009-{{ year }} Alexey Antipov</p>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const year = new Date().getFullYear();
+</script>
 
 <style>
 h1.header {
