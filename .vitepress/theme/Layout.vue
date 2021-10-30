@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { useRoute } from "vitepress";
-import Home from "./Home.vue";
+import Home from "./home/Home.vue";
 
 const route = useRoute();
 const isIndex = computed(() => route.path.replace(/index.html$/, "") === "/");
