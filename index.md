@@ -6,5 +6,5 @@ footer: Copyright © 2021-present Alexey Antipov
 ---
 
 <div class="mt-2">
-The Main
+Placeholder for main page
 </div>
