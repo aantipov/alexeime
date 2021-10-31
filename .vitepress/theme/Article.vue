@@ -17,7 +17,6 @@
 <script setup lang="ts">
 import { useData } from "vitepress";
 const { frontmatter: data } = useData();
-const year = new Date().getFullYear();
 </script>
 
 <style scoped>
