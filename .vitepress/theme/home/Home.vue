@@ -1,6 +1,7 @@
 <template>
-  <div class="container prose pt-10">
-    <h1 class="header">Alexey Antipov</h1>
+  <div class="container myprose pt-10">
+    <h1 class="home-header">Alexey Antipov</h1>
+
     <div>
       <div>
         Hi &#128075;<br />
@@ -13,43 +14,36 @@
       </div>
     </div>
 
-    <section class="projects">
+    <section>
       <h2>Projects</h2>
-      <p>
-        <a href="https://moiva.io" target="_blank" rel="noopener"> Moiva.io </a>
-      </p>
+
+      <a href="https://moiva.io" target="_blank" rel="noopener"> Moiva.io </a>
     </section>
 
-    <section class="social">
+    <section>
       <h2>Social activity</h2>
-      <p>
-        <a href="https://medium.com/@aantipov"> medium.com/@aantipov </a>
-      </p>
 
-      <p>
-        <a href="https://www.linkedin.com/in/aantipov">
-          linkedin.com/in/aantipov
-        </a>
-      </p>
-      <p>
-        <a href="https://twitter.com/_aantipov"> twitter.com/_aantipov </a>
-      </p>
-
-      <p>
-        <a href="https://github.com/aantipov"> github.com/aantipov </a>
-      </p>
+      <a class="block" href="https://medium.com/@aantipov">
+        medium.com/@aantipov
+      </a>
+      <a class="block mt-3" href="https://www.linkedin.com/in/aantipov">
+        linkedin.com/in/aantipov
+      </a>
+      <a class="block mt-3" href="https://twitter.com/_aantipov">
+        twitter.com/_aantipov
+      </a>
+      <a class="block mt-3" href="https://github.com/aantipov">
+        github.com/aantipov
+      </a>
     </section>
 
-    <section class="contact">
+    <section>
       <h2>Contact</h2>
-      <p>
-        <a href="mailto:antipov.alexei@gmail.com"> antipov.alexei@gmail.com </a>
-      </p>
+
+      <a href="mailto:antipov.alexei@gmail.com"> antipov.alexei@gmail.com </a>
     </section>
 
-    <div class="footer">
-      <p>© 2009-{{ year }} Alexey Antipov</p>
-    </div>
+    <Footer />
   </div>
 </template>
 
@@ -57,13 +51,13 @@
 const year = new Date().getFullYear();
 </script>
 
-<style>
-h1.header {
+<style scoped>
+.home-header {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3.5rem;
-  font-weight: 500;
+  text-align: left;
 }
-.icon-link {
-  @apply flex;
+.myprose h1 {
+  font-weight: 500;
 }
 </style>
