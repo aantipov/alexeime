@@ -15,8 +15,7 @@ import Article from "./Article.vue";
 
 const route = useRoute();
 const isIndex = computed(() => route.path.replace(/index.html$/, "") === "/");
-const isBlogIndex = computed(() => {
-  console.log("route", route.path);
-  return route.path.replace(/blog.html$/, "blog/") === "/blog/";
-});
+const isBlogIndex = computed(
+  () => route.path.replace(/index.html$/, "") === "/blog/"
+);
 </script>
