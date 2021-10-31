@@ -54,10 +54,8 @@ const year = new Date().getFullYear();
 <style scoped>
 .home-header {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3.5rem;
-  text-align: left;
-}
-.myprose h1 {
   font-weight: 500;
+  text-align: left;
+  @apply text-4xl lg:text-6xl;
 }
 </style>
