@@ -23,7 +23,8 @@
     <section>
       <h2>Social activity</h2>
 
-      <a class="block" href="https://medium.com/@aantipov">
+      <a class="block" href="/blog/">alexei.me/blog/</a>
+      <a class="block mt-3" href="https://medium.com/@aantipov">
         medium.com/@aantipov
       </a>
       <a class="block mt-3" href="https://www.linkedin.com/in/aantipov">
