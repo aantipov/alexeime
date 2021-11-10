@@ -1,7 +1,8 @@
 module.exports = {
   base: "/",
-  title: "Alexey Antipov. About me",
+  title: "Alexey Antipov",
   description: "Alexey Antipov. Frontend Engineer. Author of Moiva.io",
+  lang: "en-US",
   head: [
     [
       "link",
@@ -51,12 +52,5 @@ module.exports = {
     ],
   ],
 
-  themeConfig: {
-    nav: [
-      {
-        text: "About me",
-        link: "https://alexei.me",
-      },
-    ],
-  },
+  themeConfig: {},
 };

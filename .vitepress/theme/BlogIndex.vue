@@ -9,36 +9,21 @@
 
       <article>
         <h2>
-          <a href="/blog/first-post/">
-            How to build software as a rocket. Part 2</a
+          <a href="/blog/state-management--separation-of-concerns/"
+            >State Management: separation of concerns</a
           >
         </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          State Management in Frontend is complicated and approaches are not yet
+          settled. In search for a silver bullet, libraries authors come up with
+          different API styles. Developers continue to struggle. Should they,
+          though? Is the issue a lack of a perfect library?
         </p>
-        <a class="link" aria-label="read more" href="/posts/vue-3.2.html"
-          >Read more →</a
-        >
-      </article>
 
-      <article>
-        <h2>
-          <a href="/xyy"> How to build software as a rocket</a>
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
-        <a class="link" aria-label="read more" href="/posts/vue-3.2.html"
+        <a
+          class="link"
+          aria-label="read more"
+          href="/blog/state-management--separation-of-concerns/"
           >Read more →</a
         >
       </article>

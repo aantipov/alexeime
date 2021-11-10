@@ -1,6 +1,7 @@
 ---
-title: Posts
-lang: en-US
-home: false
-footer: Copyright © 2021-present Alexey Antipov
+title: Blog
+head:
+  - - meta
+    - name: description
+      content: Alexey's Blog. Frontend Engineering
 ---
