@@ -153,7 +153,7 @@ Fortunately, we are seeing a rise of libraries that specialize in managing Serve
 
 https://moiva.io/?npm=@apollo/client+react-query+relay-runtime+swr.
 
-![Npm Download and GitHub Stars trends for ReactQuery, SWR, Relay and ApolloClient](./trends.png)
+![Npm Downloads and GitHub Stars trends for ReactQuery, SWR, Relay and ApolloClient](./trends.png)
 
 These libraries automate the majority of the tasks, drastically reduce the amount of boilerplate code, and provide declarative APIs with thoughtful defaults.
 
