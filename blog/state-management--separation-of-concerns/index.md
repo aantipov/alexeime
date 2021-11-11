@@ -37,11 +37,11 @@ head:
 ---
 
 ![](./crack.jpg)
-State Management in Frontend is complicated and approaches are not yet settled. New state management libraries keep popping up. In search for a silver bullet, libraries authors come up with different API styles.
+State Management in Frontend is complicated and approaches are not yet settled. New state management libraries keep popping up. In search for a silver bullet, libraries and frameworks authors come up with different brilliant APIs and approaches. Developer Community has produced guidelines for many scenarios.
 
-Developers continue to struggle. Should they, though? Is the issue a lack of a perfect library?
+Nevertheless, developers continue to struggle. Why is that? What do they miss?
 
-## The Problem
+## The Complexities of State Management
 
 UI is a function of state. We make a minor modification to application state `setLoading(true)` and the entire UI changes to show the loading indicator.
 ![](./loading.jpeg)
@@ -50,15 +50,16 @@ Doing State Management right is a key ingredient in achieving great UX.
 
 However, it is not a trivial task to do. We need to care about a lot of things:
 
-- define the Store structure and what to put to the Store
+- define the Store structure and what to put in the Store
 - how and when to initialize and update the Store
 - immutable vs mutable
+- local vs global
 - how to handle dependent state data
 - how to represent all possible states of API requests
 - how to mock Store in tests
 - etc.
 
-As a result, we have
+As a result, we usually get
 
 - a lot of imperative and boilerplate code
 - components tightly coupled with the Store
@@ -67,21 +68,28 @@ As a result, we have
 - complicated refactoring
 - decreased developer productivity
 
-To solve these problems, we developers replace one state management library with another. It may make the code more structured and clean, but it seldom resolves all the issues. Developers continue struggling.
+## Separation Of Concerns
 
-## 💡 Mind shift
+Developers have created a plethora of libraries, techniques, and guideline to overcome or at least mitigate the challenges. And for many, it introduces a new issue: how to navigate between different libraries and techniques? When to use which?
 
-Are state management libraries not mature enough to address all our issues?
+I recognize an abstraction (perspective) that can be especially valuable when dealing with the subject. This perspective is often missing in discussions about State Management. I am talking about **Separation of Concerns**.
 
-I don't think we should blame libraries. We must seek the root of the problem in how we use those libraries.
+In UI we deal with huge amount of data with different characteristics and of different nature. We often treat all the data the same way and use the same approaches and libraries.
 
-We usually pick one library and use it to handle all of our data. Data with different characteristics and of different nature is treated the same way.
+If we apply the principle of Separating Concerns to state handling, then we discover, that
 
-**Separation of Concerns** is what State Management topic has been missing for a long time. _Different types of data deserve different approaches_.
+- not all data are equal
+- some data are simple and trivial to handle
+- some data are more complex, nuanced and tricky to handle
+- there are often specialised libraries which help dealing with the complex data
 
-That realization and mind-shift are already happening in the Developer community. We are seeing a rise of libraries designed to manage certain types of data https://moiva.io/?npm=@apollo/client+react-query+relay-runtime+swr.
+Having realised that, we can start segregating data and using specialised tools to manage complex and nuanced data. Those tools usually automate a lot of things we used to do manually and bring relief.
 
-![](./trends.png)
+I find helpful recognizing the following categories of data:
+
+- Server State
+- Form State
+- UI State (excl. Form State)
 
 ## UI State vs Server State
 
@@ -141,7 +149,13 @@ Some of the challenges that developers face when working with Server State:
 
 We all know the cost of attempting to solve these challenges on our own using common state management libraries.
 
-Fortunately, we are seeing a rise of libraries that specialize in managing Server State and solving all the inherent challenges. These libraries automate the majority of the tasks, drastically reduce the amount of boilerplate code, and provide declarative APIs with thoughtful defaults.
+Fortunately, we are seeing a rise of libraries that specialize in managing Server State and solving all the inherent challenges.
+
+https://moiva.io/?npm=@apollo/client+react-query+relay-runtime+swr.
+
+![](./trends.png)
+
+These libraries automate the majority of the tasks, drastically reduce the amount of boilerplate code, and provide declarative APIs with thoughtful defaults.
 
 Some of [**GraphQL Clients**](https://moiva.io/?npm=@apollo/client+relay-runtime) were the first who pioneered the approach. They are designed specifically for GraphQL APIs. Example: [Apollo Client](https://www.apollographql.com/docs/react/), [Relay](https://relay.dev/).
 
@@ -155,14 +169,31 @@ At this moment, React Query is probably the most sophisticated and [popular](htt
 
 React Query is React specific, but its core was fully [separated](https://react-query.tanstack.com/guides/migrating-to-react-query-3#core-separation) from React and it can be used to build solutions for other frameworks as well. Such solutions have already begun to emerge. For example, [Vue Query](https://github.com/DamianOsipiuk/vue-query/).
 
+## Form State
+
+It is often helpful to separate Form State handling from the rest of the UI state.
+
+Reason - it’s tricky and nuanced. You need:
+
+- maintain state of a form as a whole: `isDirty`, `isValid`, `isSubmitting`, `dirtyFields`, etc.
+- maintain state of each particular field: `isDirty`, `isValid`, `errors`, `isDisabled`, `currentValue`, `initialValue`
+- reset form’s and fields’ state
+- trigger validation
+- etc.
+
+For simple forms and simple use cases we can manage the state ourselves. But for complex cases it is better to reach out for specialised tools.
+
+Examples of form handling libraries:
+
+- React Hook Form [https://react-hook-form.com/]
+- Formik [https://formik.org/]
+
+Some JavaScript frameworks have built-in tools to manage forms state.
+
 ## Conclusion
 
-Separation of concerns is crucial for hassle-free state management.
+Separation of concerns is an important concept in State Management topic.
 
-We need to use specialized libraries to manage Server State because it is inherently more complicated and challenging. These libraries drastically reduce the efforts by automating many tasks, providing declarative APIs with thoughtful defaults.
+Different types of data deserve different approaches and specialised tools.
 
-## 🎁 Bonus
-
-Separation of State Data into Server State and UI State solves most of the problems, but we shouldn’t necessarily stop there.
-
-How about separating UI State and extracting data stored in URL? We usually do double work when managing URL state with state management libraries and implementing the necessary synchronization. Why not leave URL state management to our routing libraries?
+Using specialized tools often bring huge relief. It’s helpful to be aware of these tools.
