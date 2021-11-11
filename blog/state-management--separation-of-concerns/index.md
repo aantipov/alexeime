@@ -36,7 +36,7 @@ head:
       content: "https://alexei.me/blog/state-management--separation-of-concerns/"
 ---
 
-![](./crack.jpg)
+![a picture to bring attention](./crack.jpg)
 State Management in Frontend is complicated and approaches are not yet settled. New state management libraries keep popping up. In search for a silver bullet, libraries and frameworks authors come up with different brilliant APIs and approaches. Developer Community has produced guidelines for many scenarios.
 
 Nevertheless, developers continue to struggle. Why is that? What do we miss?
@@ -44,7 +44,7 @@ Nevertheless, developers continue to struggle. Why is that? What do we miss?
 ## The Complexities of State Management
 
 UI is a function of state. We make a minor modification to application state `setLoading(true)` and the entire UI changes to show the loading indicator.
-![](./loading.jpeg)
+![Loading Windows XP screen](./loading.jpeg)
 
 Doing State Management right is a key ingredient in achieving great UX.
 
@@ -127,7 +127,7 @@ Most of existing state management libraries (e.g. [Redux](https://redux.js.org/)
 Developers just need to choose a proper one.
 
 In my experience, the share of UI state and the code needed to manage it is very small for most applications.
-![](./share.png)
+![a share of UI state compared to overall Application state](./share.png)
 
 That makes the problem of choosing a UI state management library insignificant. If we use those libraries to handle true UI State data only, then most of them work just fine and the switch between any of them does not make a big difference.
 
@@ -153,7 +153,7 @@ Fortunately, we are seeing a rise of libraries that specialize in managing Serve
 
 https://moiva.io/?npm=@apollo/client+react-query+relay-runtime+swr.
 
-![](./trends.png)
+![Npm Downloads and GitHub Stars trends for ReactQuery, SWR, Relay and ApolloClient](./trends.png)
 
 These libraries automate the majority of the tasks, drastically reduce the amount of boilerplate code, and provide declarative APIs with thoughtful defaults.
 
@@ -185,8 +185,8 @@ For simple forms and simple use cases we can manage the state ourselves. But for
 
 Examples of form handling libraries:
 
-- React Hook Form [https://react-hook-form.com/]
-- Formik [https://formik.org/]
+- [React Hook Form](https://react-hook-form.com/)
+- [Formik](https://formik.org/)
 
 Some JavaScript frameworks have built-in tools to manage forms state.
 
