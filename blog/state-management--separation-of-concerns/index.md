@@ -39,7 +39,7 @@ head:
 ![](./crack.jpg)
 State Management in Frontend is complicated and approaches are not yet settled. New state management libraries keep popping up. In search for a silver bullet, libraries and frameworks authors come up with different brilliant APIs and approaches. Developer Community has produced guidelines for many scenarios.
 
-Nevertheless, developers continue to struggle. Why is that? What do they miss?
+Nevertheless, developers continue to struggle. Why is that? What do we miss?
 
 ## The Complexities of State Management
 
@@ -83,7 +83,7 @@ If we apply the principle of Separating Concerns to state handling, then we disc
 - some data are more complex, nuanced and tricky to handle
 - there are often specialised libraries which help dealing with the complex data
 
-Having realised that, we can start segregating data and using specialised tools to manage complex and nuanced data. Those tools usually automate a lot of things we used to do manually and bring relief.
+Having realised that, we can start segregating data and look for specialised tools to manage complex and nuanced data. Those tools usually automate a lot of things we used to do manually and bring relief.
 
 I find helpful recognizing the following categories of data:
 
@@ -173,7 +173,7 @@ React Query is React specific, but its core was fully [separated](https://react-
 
 It is often helpful to separate Form State handling from the rest of the UI state.
 
-Reason - it’s tricky and nuanced. You need:
+Reason - Form handling is tricky and nuanced. You need:
 
 - maintain state of a form as a whole: `isDirty`, `isValid`, `isSubmitting`, `dirtyFields`, etc.
 - maintain state of each particular field: `isDirty`, `isValid`, `errors`, `isDisabled`, `currentValue`, `initialValue`
