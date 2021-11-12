@@ -221,8 +221,8 @@ That additional complexity and confusion can be a source of bugs.
 
 ## Conclusion
 
-Separation of concerns is an important concept in State Management topic.
+Application of the Separation of Concerns principle to State Management subject may finally make it manageable and simpler to reason about.
 
 Different types of data deserve different approaches and specialised tools.
 
-Using specialized tools often bring huge relief. It’s helpful to be aware of these tools.
+Use of specialized tools often brings huge relief. It’s helpful to be aware of these tools.
