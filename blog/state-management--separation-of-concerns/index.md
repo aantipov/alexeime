@@ -5,10 +5,10 @@ head:
     - name: description
       content: "How Separation of Concerns can help resolve the never-ending State Management fatigue"
   - - meta
-    - property: og:title
-      content: "State Management: Separation of Concerns"
-  - - meta
     - property: og:description
+      content: "How Separation of Concerns can help resolve the never-ending State Management fatigue"
+  - - meta
+    - name: twitter:description
       content: "How Separation of Concerns can help resolve the never-ending State Management fatigue"
   - - meta
     - property: og:image
@@ -16,18 +16,6 @@ head:
   - - meta
     - property: og:url
       content: "https://alexei.me/blog/state-management--separation-of-concerns/"
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:creator
-      content: "@_aantipov"
-  - - meta
-    - name: twitter:title
-      content: "State Management: Separation of Concerns"
-  - - meta
-    - name: twitter:description
-      content: "How Separation of Concerns can help resolve the never-ending State Management fatigue"
   - - meta
     - name: twitter:image
       content: "https://alexei.me/twitter/state-managment-separation-concerns.jpg"
