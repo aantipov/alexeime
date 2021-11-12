@@ -1,6 +1,9 @@
 <template>
-  <footer class="flex justify-center mt-8 py-8">
-    <p>© 2009-{{ year }} Alexey Antipov</p>
+  <footer class="flex justify-center mt-8 py-8 myprose">
+    <p>
+      © 2009-{{ year }}
+      <a href="/"> Alexey Antipov </a>
+    </p>
   </footer>
 </template>
 
