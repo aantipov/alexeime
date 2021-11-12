@@ -42,6 +42,20 @@ module.exports = {
       },
     ],
     [
+      "meta",
+      {
+        name: "twitter:creator",
+        content: "@_aantipov",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    ],
+    [
       "script",
       {
         async: true,
