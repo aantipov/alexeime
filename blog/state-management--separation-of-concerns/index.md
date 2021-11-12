@@ -190,10 +190,39 @@ Examples of form handling libraries:
 
 Some JavaScript frameworks have built-in tools to manage forms state.
 
+## Navigation (URL) State
+
+Navigation (URL) State is another part of UI State which is helpful to distinguish.
+
+![a picture of UI State which includes Form State + URL State](./uistate.png)
+
+URL path, query parameters, and hash all determine what is displayed and how it is displayed on the page.
+
+The decision about which parts of UI state to include and which not to include in the URL is usually based on the answers to a couple of basic questions:
+
+> What state should be shareable through links?
+
+> What state should be preserved when the page is reloaded?
+
+Although one can use [History](https://developer.mozilla.org/en-US/docs/Web/API/History)'s `pushState()` and `replaceState()` methods to manage URL State, it is often better to use dedicated routing libraries which provide useful abstractions and helper functions and are usually framework specific.
+
+Examples of routing libraries:
+
+- [React Router](https://reactrouter.com/)
+- [React Location](https://react-location.tanstack.com/)
+- [Vue Router](https://router.vuejs.org/)
+
+Developers sometimes put URL state in Global Store and manage it using Redux or other standard state management libraries. I see it as an antipattern:
+
+- it adds additional complexity because you need to synchronize Global state and URL state
+- you have two sources of truth, which might lead to confusion about when to use which
+
+That additional complexity and confusion can be a source of bugs.
+
 ## Conclusion
 
-Separation of concerns is an important concept in State Management topic.
+Application of the Separation of Concerns principle to State Management subject may finally make it manageable and simpler to reason about.
 
 Different types of data deserve different approaches and specialised tools.
 
-Using specialized tools often bring huge relief. It’s helpful to be aware of these tools.
+Use of specialized tools often brings huge relief. It’s helpful to be aware of these tools.

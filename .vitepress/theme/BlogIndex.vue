@@ -10,14 +10,15 @@
       <article>
         <h2>
           <a href="/blog/state-management--separation-of-concerns/"
-            >State Management: separation of concerns</a
+            >State Management: Separation of Concerns</a
           >
         </h2>
         <p>
           State Management in Frontend is complicated and approaches are not yet
           settled. In search for a silver bullet, libraries authors come up with
-          different API styles. Developers continue to struggle. Should they,
-          though? Is the issue a lack of a perfect library?
+          different brilliant APIs and approaches. Developer Community has
+          produced guidelines for many scenarios. Nevertheless, developers
+          continue to struggle. Why is that? What do we miss?
         </p>
 
         <a
