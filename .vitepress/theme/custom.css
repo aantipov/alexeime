@@ -15,6 +15,6 @@ h1.header {
 
 @layer components {
   .myprose {
-    @apply prose sm:prose-sm lg:prose-xl mx-auto;
+    @apply prose lg:prose-xl mx-auto;
   }
 }
