@@ -4,29 +4,40 @@
 
 ## Preface
 
-When developing UI applications we compose them from reusable UI components. Each component is essentially a combination of a markup, scoped styles and behaviour. In this article I want to show we can make use of recent developments in Frontend Engineering and elaborate the concept of Components further and convert them into reusable Widgets.
+When developing UI applications we compose them from components. Each UI component is essentially a combination of a markup, scoped styles and some logic. In this article I want to show how using recent Frontend developments we can elaborate the concept of Components further and transform them into reusable isolated Widgets.
 
-## History of Components
+## The History of Components
 
-Many remember times when all application styles were defined in one global CSS file. Styles definitions used complex combinations of ids and classes. Those ids and classes were hardcoded in the markup. Applications often suffered from style collisions. Sometimes the size and complexity of those styles significantly affected performance of web sites.
+Many remember times when all application's styles were defined in one global CSS file. Styles definitions used complex combinations of [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). As you imagine, applications often suffered from style collisions. Sometimes the size and complexity of those styles even affected the performance of web sites.
 
-In 2009 BEM [https://en.bem.info/methodology/ ] was born. BEM provided a set of recommendations how to define styles and how to name classes. Those rules were meant to solve the problem of style collisions and inefficient selectors. BEM encouraged to think of UI in terms of blocks, elements and modifiers. 
-2013-2015 marked the raise of Components approach. React made it to split UIs into components which combined behaviour and markup. It was a revolution.
-Other frameworks soon adopted that components based approach.
+In 2009 [BEM](https://en.bem.info/methodology/) was born. BEM provided a set of recommendations how to define styles and how to name classes. Those rules were meant to solve the problem of style collisions and inefficient selectors. BEM encouraged to think of UI in terms of blocks, elements and modifiers.
 
-The rise of CSS preprocessors and build tools with the following up techniques like CSS-in-JS and CSS modules made it possible to include CSS into Components.
+2013-2015 marked the rise of Components approach. React made it easy to split UI into components which were a combination of a markup (HTML) and logic (JavaScript). It was kinda a revolution in developing applications and reasoning about applications. Other frameworks soon adopted that components based approach as well.
 
-Components playgrounds like Storybook appeared to help developers build components in an isolated environment and ensure proper styles scoping. They encouraged developers to think of UI as a function of state: UI components accepted props which defined the look of components.
+The rise of build tools, CSS preprocessors, and techniques like CSS-in-JS and [CSS Modules](https://github.com/css-modules/css-modules) made it possible to include CSS into Components.
+
+![](./component.png)
+
+Components playgrounds like Storybook emerged to help developers build components in an isolated environment and ensure proper styles scoping. They encouraged developers to think of UI as [a function of state](https://www.kn8.lt/blog/ui-is-a-function-of-data/): components props values defined the look of components.
+
+Collections of reusable high quality components emerged.
 
 ## The unresolved hurdles
 
-Component driven approach helped break UI into isolated reusable pieces. It enabled building big scalable applications.
+Component driven approach helped break UI into isolated reusable pieces and enabled building large-scale applications using collections of pre-built components.
 
-What was missing though is the way of providing data to UI components.
+What was missing though is the way of supplying UI components with data.
 
-We learned to split components into two categories: presentational and container components. Presentational components are responsible for UI representation and they are usually stateless. Container components contain all the data related logic and pass data to Presentational components.
+Data management became one of the most difficult tasks in Frontend Engineering and the main contributor of complexity to UI applications.
 
-So, how the Container components could get the required data?
+We learned to split components into two categories: Presentational and Container components:
+
+- Presentational components are responsible for UI representation and they are usually stateless.
+- Container components contain all the data related logic and pass data down to Presentational components.
+
+All that's left is to define logic for Container components to get the required data.
+
+![](./container-presentation.png)
 
 ## The Naive approach
 
