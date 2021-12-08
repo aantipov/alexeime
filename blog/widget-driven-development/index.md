@@ -41,9 +41,13 @@ All that's left is to define logic for Container components to get the required 
 
 ## The Naive approach
 
-The naive approach would be for each Container component to fetch the data needed by underlying Presentational components. The problem is that usually data is shared between multiple components and such approach would then lead to a number of issues, including
+The naive approach would be for each Container component to simply fetch data needed by underlying Presentational components.
 
-- many duplicated requests and data over-fetching and, as a result, slow UI and overloaded server.
+![](./fe-be-interaction.png)
+
+Implementing such approach in practice would bring a bunch of problems because different data is shared between multiple components. To mention a few:
+
+- many duplicated requests and data over-fetching. Slow UI and overloaded server as a result.
 - possible UI inconsistency when requests to the same endpoint return different data
 - complicated data invalidation (think of a case when the data returned by an endpoint needs to be re-fetched and you need to make sure every component does it)
 
