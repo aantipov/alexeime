@@ -45,19 +45,28 @@ The naive approach would be for each Container component to simply fetch data ne
 
 ![](./fe-be-interaction.png)
 
-Implementing such approach in practice would bring a bunch of problems because different data is shared between multiple components. To mention a few:
+Implementing such approach in practice would bring a bunch of problems because different data is shared between multiple components:
 
 - many duplicated requests and data over-fetching. Slow UI and overloaded server as a result.
-- possible UI inconsistency when requests to the same endpoint return different data
+- possible data inconsistency between components when requests to the same endpoint return different data
 - complicated data invalidation (think of a case when the data returned by an endpoint needs to be re-fetched and you need to make sure every component does it)
 
 ## The Common parent approach
 
-The solution was to fetch data one time in a common parent Container component and pass data down to all the interested parties. That approach made birth to a new problem called “Prop Drilling” [https://kentcdodds.com/blog/prop-drilling].
+We can overcome the problem by putting data-fetching and data-updating logic into a common parent component and passing data down to all underlying components.
+
+![](./prop-drilling.png)
+
+We solved the problem with requests duplication and data invalidation. But we got new problems in return:
+
+- the whole application logic became more complex and more coupled
+- we have to pass data down through multiple componets. That problem became notorious and got its own name [“Prop Drilling”](https://kentcdodds.com/blog/prop-drilling).
 
 ## The State Management approach
 
 Two avoid Prop Drilling, we learned to use State Management libraries and techniques: we put data in some Store and then the data from that Store can be easily retrieved by other components. The Store notifies all the subscribed components about the updates.
+
+![](./store.png)
 
 The usage of state management libraries and techniques itself lead to a number of new problems:
 
@@ -71,6 +80,8 @@ Such problems are the main reason developers keep reimagining approaches to stat
 ## The Naive approach reimagined
 
 Prop drilling and State Management both have the same flaw - the logic of providing data to a specific piece of UI is spread across application and we get tightly coupled container components: via a prop drilling or via a shared store. The components become highly dependant on the their execution context. We can’t easily move components around. Tests require reproduction of the context which is often a non-trivial task.
+
+![](./api-wrapper.png)
 
 Can we do better? How about giving the Naive approach another chance? If only we could solve its underlying issues somehow…
 
