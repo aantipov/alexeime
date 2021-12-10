@@ -12,9 +12,9 @@ Many remember times when all application's styles were defined in one global CSS
 
 In 2009 [BEM](https://en.bem.info/methodology/) was born. BEM provided a set of recommendations how to define styles and how to name classes. Those rules were meant to solve the problem of style collisions and inefficient selectors. BEM encouraged to think of UI in terms of blocks, elements and modifiers.
 
-2013-2015 marked the rise of Components approach. React made it easy to split UI into components which were a combination of a markup (HTML) and logic (JavaScript). It was kinda a revolution in developing applications and reasoning about applications. Other frameworks soon adopted that components based approach as well.
+2013-2015 marked the rise of Components approach. React made it easy to split UI into components which were a combination of a markup (HTML) and UI logic (JavaScript). It was kinda a revolution in developing applications and reasoning about applications. Other frameworks soon adopted that components based approach as well.
 
-The rise of build tools, CSS preprocessors, and techniques like CSS-in-JS and [CSS Modules](https://github.com/css-modules/css-modules) made it possible to include CSS into Components.
+The rise of build tools, CSS preprocessors, and techniques like CSS-in-JS and [CSS Modules](https://github.com/css-modules/css-modules) made it possible to include Styling into Components.
 
 ![](./component.png)
 
@@ -37,7 +37,7 @@ We learned to split components into two categories: Presentational and Container
 
 All that's left is to define logic for Container components to get the required data.
 
-![](./container-presentation.png)
+![](./container.png)
 
 ## The Naive approach
 
@@ -64,41 +64,50 @@ We solved the problem with requests duplication and data invalidation. But we go
 
 ## The State Management approach
 
-Two avoid Prop Drilling, we learned to use State Management libraries and techniques: we put data in some Store and then the data from that Store can be easily retrieved by other components. The Store notifies all the subscribed components about the updates.
+Two avoid Prop Drilling problem, we learned to use State Management libraries and techniques: instead of passing data to underlying components we put it in some Store which is directly available to all the components down the tree, so they can easily get the data from there. Components subscribe to the changes in the Store to always have up-to-date data.
 
 ![](./store.png)
 
-The usage of state management libraries and techniques itself lead to a number of new problems:
+The Prop Drilling problem was solved but again we didn't get the solution for free:
 
-- lots of boilerplate code (think of all those actions, reducers, )
-- complicated with indirect data flow logic code which is hard to refactor and optimise
-- hard to test
-- hard to debug
-
-Such problems are the main reason developers keep reimagining approaches to state management: new state management libraries keep popping up here and there.
+- we now have to deal with a completely new concept of the Store and care about a bunch of new things like design and maintain Store structure, properly update data in the Store, mutalbe vs immutable. In addition, many state management libraries come with concepts like Actions, Reducers, Action Creators, Middlewares. Different patterns evolved around store management problems.
+- all the new concepts, vocabulary and patterns complicated data management deeper. It became very tangled and coupled. Frustrated developers keep introducing new state management libraries with different syntax in hope of simplifying things.
 
 ## The Naive approach reimagined
 
-Prop drilling and State Management both have the same flaw - the logic of providing data to a specific piece of UI is spread across application and we get tightly coupled container components: via a prop drilling or via a shared store. The components become highly dependant on the their execution context. We can’t easily move components around. Tests require reproduction of the context which is often a non-trivial task.
+Can we do better? Is there an easier way to approach data management? Can we have the data flow transparent and easy to understand? Can we untangle our applications and achieve better [orthogonality](https://www.freecodecamp.org/news/orthogonality-in-software-engineering/)?
+
+It seems to me we just went too deep into the forest and _can't see the forest for the trees_. Let's go back to the starting point, to the Naive approach, and see if we can handle its problems differently.
+
+The main bummers there were requests duplication and data inconsistency.
+
+What if we could have an intermediate player between our components and Backend, say an API wrapper or interceptor, solving all those problems under the hood:
+
+- deduplicate all the requests
+- ensure data consistency: all the components should always have the same data when using the same request
+- provide data invalidation ability: if a component changes data on the server, all the dependendant components should get updated data
+- last, but not least, be transparent to the components and not affecting their logic in any way (make components think they communicate to Backend directly)
 
 ![](./api-wrapper.png)
 
-Can we do better? How about giving the Naive approach another chance? If only we could solve its underlying issues somehow…
+Turns out we can have it and there are already libraries providing us such API Wrappers:
 
-Turns out, there are solutions which solve the issues we outlined for the Naive approach. Those solutions fall into two categories based on the type of API:
+- some of GraphQL clients
+- [React-Query](https://react-query.tanstack.com/), [SWR](https://swr.vercel.app/), [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview), [Vue Query](https://vue-query.vercel.app/) for RESTful APIs
 
-- different GraphQL clients
-- React-Query, SWR, Redux Toolkit Query for RESTful APIs
+All we basically need to do is to wrap every api call with such an API Wrapper. The rest is handled automatically for us.
 
-I find it helpful to think of such libraries as a wrappers for API requests. All we need is to wrap data fetching and mutation requests with those libraries and fetch/mutate data wherever we need. The libraries will make sure all the requests are deduplicated, data are consistent across the application, invalidation happens automatically.
+The huge benefit of such approach is that we can finally untangle our applications' data logic and achieve better orthogonality by combining all pieces together.
 
-Following the Naive approach, every component is responsible to fetch all the data it needs and also for mutating data. That enables us to get the utterly loosely coupled components which are easy to test. It also removes the burden of worrying about the data propagation and store management. We sort of simply communicating with API: fetching data and mutating data.
+![](./triangle.png)
 
 ## Widget driven development
 
-Here I want to describe the approach to development of UI which enabled my team to build reliable, flexible and easily testable UI with clear logic. I’m extremely happy with the result. It might be beneficial to other developers as well.
+In my team we started to use the Naive approach described above and we love it a lot. It enabled us to approach building our application differently. I like to call it _"Widget Driven Development"_.
 
-The approach is based on the Naive approach and is using React-Query library.
+The idea is that we split every page into so-called widgets.
+
+![](./page.png)
 
 First of all, we started to think of every page of our application as a set of self-contained widgets with little to zero inter-widget communication and dependencies.
 
