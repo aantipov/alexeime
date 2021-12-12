@@ -1,4 +1,28 @@
-# Widget Driven Development
+---
+title: "Widget Driven Development"
+head:
+  - - meta
+    - name: description
+      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
+  - - meta
+    - property: og:description
+      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
+  - - meta
+    - name: twitter:description
+      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
+  - - meta
+    - property: og:image
+      content: "https://alexei.me/twitter/human-evolution.jpg"
+  - - meta
+    - property: og:url
+      content: "https://alexei.me/blog/widget-driven-development/"
+  - - meta
+    - name: twitter:image
+      content: "https://alexei.me/twitter/human-evolution.jpg"
+  - - meta
+    - property: twitter:url
+      content: "https://alexei.me/blog/widget-driven-development/"
+---
 
 ![Evolution of Frontend: from "Before Componets" to "Components" to "Widgets](./human-evolution.png)
 
