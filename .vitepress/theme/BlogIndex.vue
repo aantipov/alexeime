@@ -7,7 +7,7 @@
     <section class="mt-10 myprose">
       <h1 class="header">Posts</h1>
 
-      <article>
+      <!-- <article>
         <h2>
           <a href="/blog/widget-driven-development/"
             >Widget Driven Development</a
@@ -27,7 +27,7 @@
           href="/blog/state-management--separation-of-concerns/"
           >Read more →</a
         >
-      </article>
+      </article> -->
 
       <article>
         <h2>
