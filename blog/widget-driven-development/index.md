@@ -90,9 +90,9 @@ What if we could have an intermediate player between our components and Backend,
 
 ![](./api-wrapper.png)
 
-Turns out we can have it and there are already libraries providing us such API Wrappers:
+Turns out we can have it and there are already libraries providing such API Wrappers:
 
-- some of GraphQL clients
+- some GraphQL clients, e.g. [Relay](https://relay.dev/)
 - [React-Query](https://react-query.tanstack.com/), [SWR](https://swr.vercel.app/), [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview), [Vue Query](https://vue-query.vercel.app/) for RESTful APIs
 
 All we basically need to do is to wrap every api call with such an API Wrapper. The rest is handled automatically for us.
@@ -103,45 +103,69 @@ The huge benefit of such approach is that we can finally untangle our applicatio
 
 ## Widget driven development
 
-In my team we started to use the Naive approach described above and we love it a lot. It enabled us to approach building our application differently. I like to call it _"Widget Driven Development"_.
+In my team we started to use the Naive approach described above and we love it a lot. It enabled us to approach building our application differently. Let me call it _"Widget Driven Development"_.
 
-The idea is that we split every page into so-called widgets.
+The idea is that we split every page into so-called _widgets_, which are utterly independendant and self-contained.
 
 ![](./page.png)
-
-First of all, we started to think of every page of our application as a set of self-contained widgets with little to zero inter-widget communication and dependencies.
 
 Every widget is responsible for:
 
 - fetching and providing all the required data to its UI
-- mutating data on server if needed
-- data representation in UI
+- mutating the related data on server if needed
+- data representation in the UI
 - UI for Loading state
 - (optional) UI for Error state
 
-Widgets can include other widgets as well.
+Speaking of code organisation, we co-locate all the widgets related files:
 
-Second, we organised our code into widgets:
-/ Widget 1
+![](./files.png)
 
-- Container.tsx
-- Container.test.tsx
-- Presentation.tsx
-- Presentation.stories.tsx
-- Loading.tsx
-  / Widget 2
-- …
+Usually the same API endpoint is used across multiple widgets. So we decided to keep all of them in a separate shared folder.
 
-Most endpoints are reused across multiple widgets. Hence we have a separate folder where we keep all the wrapped queries:
-/ queries
+![](./queries.png)
 
-- useBook.ts
-- useBooks.ts
+:::info note
+Such queries organisation works well for us because we use RESTful APIs and React Query. In case of GraphQL APIs it might not make sense.
+:::
 
-In our case most widgets’ container components have no props. They rely on routing library to get the required data identifiers from Url and fetch the corresponding data from Backend.
+We use React Query library and each file in the `queries/` folder exposes fetch and mutation methods wrapped into React Query.
 
-In widgets’ tests we mocked API requests and URL state. Both tasks were straightforward to do. It was easy to test all possible use cases for every widget in isolation.
+All Container components have a similar code structure.
 
-Every widget can easily be reused on different pages. We just need to make sure the URLs of those pages contain the data identifiers needed for the widget.
+```ts
+import { useParams } from 'react-router-dom';
+import { useBookQuery } from 'queries/useBookQuery';
+import { useAuthorQuery } from 'queries/useAuthorQuery';
+import Presentation from './Presentation';
+import Loading from './Loading';
+import Error from './Error';
 
-The source code for every widget can also easily be moved around.
+export default BookDetailsContainer() {
+  const { bookId } = useParams();
+  const { data: book, isError: isBookError } = useBookQuery(bookId);
+  const { data: author, isError: isAuthorError } = useAuthorQuery(book?.author);
+
+  if (book && author) {
+    return <Presentation book={book} author={author} />
+  }
+
+  if (isBookError || isAuthorError) {
+    return <Error />
+  }
+
+  return <Loading />
+}
+```
+
+Notice how easily and declaratively dependant queries are handled. Also the only dependency of our widget is the presence of `bookId` in the url.
+
+Most our widgets’ container components have no props and rely on no external state except for URL data.
+
+Such approach makes it transparent what API queries our widget relies upon. That transparency combined with near to zero external dependencies makes it easy to test widgets and gives us confidence in our code.
+
+Any changes to a widget are, usually, limited by that widget's folder. It significantly limits the risk of breaking any other parts of the application.
+
+Introduction of new widgets is also very straightforward: create a new folder for the widget with all required files in it and, if necessary, create a new query in the `/queries` folder. Again, the risk of breaking any other parts of the application if very limited.
+
+Every widget can also be easily reused on different pages thanks to the limited dependency on the context. We usually just need to make sure the URLs of those pages contain the data identifiers needed for the widget.
