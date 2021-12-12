@@ -169,3 +169,11 @@ Any changes to a widget are, usually, limited by that widget's folder. It signif
 Introduction of new widgets is also very straightforward: create a new folder for the widget with all required files in it and, if necessary, create a new query in the `/queries` folder. Again, the risk of breaking any other parts of the application if very limited.
 
 Every widget can also be easily reused on different pages thanks to the limited dependency on the context. We usually just need to make sure the URLs of those pages contain the data identifiers needed for the widget.
+
+## Conclusion
+
+The components approach made it easy and straightforwad creating reusable independant pieces of UI.
+
+Nevertheless, frontend applications are often suffer from the same symptoms: high level of inter-dependency between different parts of application, complicated tests, complicated changes, reduced development velocity. The root cause is usually a poor data management.
+
+There are libraries which enable approach data management differently and significanly reduce complexity of our applications making them more robust and easy to test. Developers can get more confidence and be more productive.
