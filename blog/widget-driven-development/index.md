@@ -76,11 +76,11 @@ The naive approach would be for each Container component to simply fetch data ne
 
 ![an image of Frontend and Backend interaction](./fe-be-interaction.png)
 
-Implementing such an approach in practice would bring a bunch of problems because different data is shared between multiple components:
+Because the same data is usually needed by multiple different components, implementing such an approach in practice would bring a bunch of problems:
 
-- many duplicated requests and data over-fetching. Slow UI and overloaded server as a result.
-- possible data inconsistency between components when requests to the same endpoint return different data
-- complicated data invalidation (think of a case when the data returned by an endpoint needs to be re-fetched and you need to make sure every component does it)
+- duplicated requests and data over-fetching. Slow UI and overloaded server as a result.
+- possible data inconsistency between components when requests to the same endpoint result in different data
+- complicated data invalidation (think of a case when the data has changed on Backend and you need to make sure every dependent component refetches the data)
 
 ## The Common parent approach
 
