@@ -1,5 +1,6 @@
 ---
 title: "State Management: Separation of Concerns"
+date: 2021-11-10
 head:
   - - meta
     - name: description

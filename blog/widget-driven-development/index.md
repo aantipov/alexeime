@@ -1,5 +1,7 @@
 ---
 title: "Widget Driven Development"
+date: 2021-12-14
+hidden: true
 head:
   - - meta
     - name: description
