@@ -31,11 +31,15 @@ head:
 
 ## Preface
 
-When developing UI applications we compose them from components. Each UI component is essentially a combination of markup, scoped styles, and some UI logic. Data Management is left out of the scope of components and that often leads to a complicated architecture with non-transparent data flows. In this article, I want to show how we can transform components into autonomous isolated widgets that integrate UI components with data logic.
+When developing UI applications, we compose them from components. Each UI component is essentially a combination of markup, scoped styles, and some UI logic. Data Management is frequently left out of components control, resulting in a complicated architecture with convoluted data flows.
+
+In this article, I'll demonstrate how we can transform components into autonomous isolated widgets with complete control over both Data Logic and UI.
 
 ## The History of Components
 
-Many remember times when all application's styles were defined in one global CSS file. Styles definitions used complex combinations of [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). As you imagine, applications often suffered from style collisions. Sometimes the size and complexity of those styles even affected the performance of websites.
+Widgets, in my opinion, are the natural successors of Components. To see this, I recommend going back in time and look at how our approaches for building UI have evolved over time.
+
+Many remember times when all application styles were defined in one global CSS file. Styles definitions used complex combinations of [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). As you imagine, applications often suffered from style collisions. Sometimes the size and complexity of those styles even affected the performance of websites.
 
 In 2009 [BEM](https://en.bem.info/methodology/) was born. BEM provided a set of recommendations on how to define styles and how to name classes. Those rules were meant to solve the problem of style collisions and inefficient selectors. BEM encouraged to think of UI in terms of blocks, elements, and modifiers.
 
