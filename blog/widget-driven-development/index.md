@@ -37,21 +37,21 @@ In this article, I'll demonstrate how we can transform components into autonomou
 
 ## The History of Components
 
-Widgets, in my opinion, are the natural successors of Components. To see this, I recommend going back in time and look at how our approaches for building UI have evolved over time.
+Widgets, in my opinion, are the natural successors of Components. To see this, I suggest going back in time and look at how our approaches to building UI have evolved over time.
 
-Many remember times when all application styles were defined in one global CSS file. Styles definitions used complex combinations of [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). As you imagine, applications often suffered from style collisions. Sometimes the size and complexity of those styles even affected the performance of websites.
+Many remember the times when all application styles were defined in a single global CSS file. Styles definitions used complex combinations of different [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). Style collisions were common in apps. The size and complexity of those styles sometimes affected even the performance of websites.
 
-In 2009 [BEM](https://en.bem.info/methodology/) was born. BEM provided a set of recommendations on how to define styles and how to name classes. Those rules were meant to solve the problem of style collisions and inefficient selectors. BEM encouraged to think of UI in terms of blocks, elements, and modifiers.
+In 2009 [BEM](https://en.bem.info/methodology/) was born. BEM provided a set of guidelines for defining styles and naming classes. These rules were intended to address the problem of style collisions and inefficient selectors. BEM encouraged to think of UI in terms of blocks, elements, and modifiers.
 
-2013-2015 marked the rise of Components approach. React made it easy to split UI into components that were a combination of markup (HTML) and UI logic (JavaScript). It was kinda a revolution in developing applications and reasoning about applications. Other frameworks soon adopted that components-based approach as well.
+2013-2015 marked the rise of **Components** approach. React made it simple to divide UI into components that were a combination of markup (HTML) and UI logic (JavaScript). It was a game changer in application development. Other frameworks soon followed suit, adopting a components-based approach as well.
 
-The rise of build tools, CSS preprocessors, and techniques like CSS-in-JS and [CSS Modules](https://github.com/css-modules/css-modules) made it possible to include Styling into Components.
+With the rise of build tools, CSS preprocessors, and techniques like CSS-in-JS and [CSS Modules](https://github.com/css-modules/css-modules), it became feasible to make Styling a part of Components.
 
 ![a combination of Markup, Styles and UI Logic](./component.png)
 
-Components playgrounds like Storybook emerged to help developers build components in an isolated environment and ensure proper styles scoping. They encouraged developers to think of UI as [a function of state](https://www.kn8.lt/blog/ui-is-a-function-of-data/): components props values defined the look of components.
+Components playgrounds such as Storybook emerged to help developers build components in an isolated environment and ensure proper styles scoping. They encouraged developers to think of UI as [a function of state](https://www.kn8.lt/blog/ui-is-a-function-of-data/): components props values defined the look and behaviour of components.
 
-Collections of reusable high-quality components emerged.
+Collections of reusable high-quality components became a thing.
 
 ## The unresolved hurdles
 
