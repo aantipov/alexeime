@@ -15,13 +15,13 @@ head:
       content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
   - - meta
     - property: og:image
-      content: "https://alexei.me/twitter/human-evolution.jpg"
+      content: "https://alexei.me/twitter/human-evolution.png"
   - - meta
     - property: og:url
       content: "https://alexei.me/blog/widget-driven-development/"
   - - meta
     - name: twitter:image
-      content: "https://alexei.me/twitter/human-evolution.jpg"
+      content: "https://alexei.me/twitter/human-evolution.png"
   - - meta
     - property: twitter:url
       content: "https://alexei.me/blog/widget-driven-development/"

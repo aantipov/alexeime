@@ -17,4 +17,8 @@ h1.header {
   .myprose {
     @apply prose lg:prose-xl mx-auto;
   }
+  .myprose img {
+    @apply mx-auto;
+    max-height: 80vh;
+  }
 }
