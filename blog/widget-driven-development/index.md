@@ -57,16 +57,16 @@ Collections of reusable high-quality components became a thing.
 
 Component-driven approach helped break UI into isolated reusable pieces and enabled building large-scale applications using collections of pre-built components.
 
-What was missing though is the way of supplying UI components with data.
+What was missing, though, is a way of supplying UI components with data.
 
-Data management became one of the most difficult tasks in Frontend Engineering and the main contributor of complexity to UI applications.
+Data management became one of the most difficult tasks in Frontend Engineering and the primary contributor to the complexity of UI apps.
 
-We learned to split components into two categories: Presentational and Container components:
+We learned to split components into two types:
 
-- Presentational components are responsible for UI representation and they are usually stateless.
-- Container components contain all the data-related logic and pass data down to Presentational components.
+- _Presentational_ components, which are responsible for UI representation and are usually stateless and side-effect free
+- _Container_ components, which deal with data-related logic and pass data down to Presentational components.
 
-All that's left is to define logic for Container components to get the required data.
+All that remains is to define how Container components should work with data.
 
 ![an image of Container component that includes a Presentational component and Data logic](./container.png)
 
