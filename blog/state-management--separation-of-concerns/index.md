@@ -1,6 +1,7 @@
 ---
 title: "State Management: Separation of Concerns"
 date: 2021-11-10
+summary: How application of Separation of Concerns principle can simplify State Management in Frontend.
 head:
   - - meta
     - name: description
