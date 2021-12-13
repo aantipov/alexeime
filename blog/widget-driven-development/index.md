@@ -1,5 +1,8 @@
 ---
 title: "Widget Driven Development"
+date: 2021-12-14
+summary: How we can achieve better decomposition in Frontend applications by leveraging streamlined Data Management.
+hidden: true
 head:
   - - meta
     - name: description
@@ -12,13 +15,13 @@ head:
       content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
   - - meta
     - property: og:image
-      content: "https://alexei.me/twitter/human-evolution.jpg"
+      content: "https://alexei.me/twitter/human-evolution.png"
   - - meta
     - property: og:url
       content: "https://alexei.me/blog/widget-driven-development/"
   - - meta
     - name: twitter:image
-      content: "https://alexei.me/twitter/human-evolution.jpg"
+      content: "https://alexei.me/twitter/human-evolution.png"
   - - meta
     - property: twitter:url
       content: "https://alexei.me/blog/widget-driven-development/"
@@ -40,7 +43,7 @@ In 2009 [BEM](https://en.bem.info/methodology/) was born. BEM provided a set of 
 
 The rise of build tools, CSS preprocessors, and techniques like CSS-in-JS and [CSS Modules](https://github.com/css-modules/css-modules) made it possible to include Styling into Components.
 
-![](./component.png)
+![a combination of Markup, Styles and UI Logic](./component.png)
 
 Components playgrounds like Storybook emerged to help developers build components in an isolated environment and ensure proper styles scoping. They encouraged developers to think of UI as [a function of state](https://www.kn8.lt/blog/ui-is-a-function-of-data/): components props values defined the look of components.
 
@@ -61,13 +64,13 @@ We learned to split components into two categories: Presentational and Container
 
 All that's left is to define logic for Container components to get the required data.
 
-![](./container.png)
+![an image of Container component that includes a Presentational component and Data logic](./container.png)
 
 ## The Naive approach
 
 The naive approach would be for each Container component to simply fetch data needed by underlying Presentational components.
 
-![](./fe-be-interaction.png)
+![an image of Frontend and Backend interaction](./fe-be-interaction.png)
 
 Implementing such an approach in practice would bring a bunch of problems because different data is shared between multiple components:
 
@@ -79,7 +82,7 @@ Implementing such an approach in practice would bring a bunch of problems becaus
 
 We can overcome the problem by putting data-fetching and data-updating logic into a common parent component and passing data down to all underlying components.
 
-![](./prop-drilling.png)
+![an image of Frontend and Backend interaction + Prop Drilling between Components](./prop-drilling.png)
 
 We solved the problem with requests duplication and data invalidation. But we got new problems in return:
 
@@ -90,7 +93,7 @@ We solved the problem with requests duplication and data invalidation. But we go
 
 Two avoid the Prop Drilling problem, we learned to use State Management libraries and techniques: instead of passing data to underlying components we put it in some Store which is directly available to all the components down the tree, so they can easily get the data from there. Components subscribe to the changes in the Store to always have up-to-date data.
 
-![](./store.png)
+![an image of Frontend and Backend interaction + Global Store](./store.png)
 
 The Prop Drilling problem was solved but again we didn't get the solution for free:
 
@@ -112,7 +115,7 @@ What if we could have an intermediate player between our components and Backend,
 - provide data invalidation ability: if a component changes data on the server, all the dependent components should get updated data
 - last, but not least, be transparent to the components and not affect their logic in any way (make components think they communicate to Backend directly)
 
-![](./api-wrapper.png)
+![Frontend and Backend interaction using an API Wrapper](./api-wrapper.png)
 
 Turns out we can have it and there are already libraries providing such API Wrappers:
 
@@ -123,7 +126,7 @@ All we basically need to do is to wrap every API call with such an API Wrapper. 
 
 The huge benefit of such an approach is that we can finally untangle our applications' data logic and achieve better orthogonality by combining all pieces together.
 
-![](./triangle.png)
+![a triangle including Data Logic, Styles, Markup and UI Logic](./triangle.png)
 
 ## Widget driven development
 
@@ -131,7 +134,7 @@ In my team, we started to use the Naive approach described above and we love it 
 
 The idea is that we split every page into so-called _widgets_, which are utterly independent and self-contained.
 
-![](./page.png)
+![a Page separated into Widgets](./page.png)
 
 Every widget is responsible for:
 
@@ -143,11 +146,11 @@ Every widget is responsible for:
 
 Speaking of code organization, we co-locate all the widgets related files:
 
-![](./files.png)
+![an image of files grouped into widgets](./files.png)
 
 Usually, the same API endpoint is used across multiple widgets. So we decided to keep all of them in a separate shared folder.
 
-![](./queries.png)
+![an image of queries hooks grouped under "queries" folder](./queries.png)
 
 :::info note
 Such queries organization works well for us because we use RESTful APIs and React Query. It might not make sense in the case of GraphQL APIs.

@@ -23,19 +23,29 @@
     <section>
       <h2>Social activity</h2>
 
-      <a class="block" href="/blog/">alexei.me/blog/</a>
-      <a class="block mt-3" href="https://medium.com/@aantipov">
-        medium.com/@aantipov
+      <a class="block" href="/blog/">Blog</a>
+      <a
+        class="block mt-3"
+        href="https://www.linkedin.com/in/aantipov"
+        target="_blank"
+        rel="noopener"
+      >
+        Linkedin
       </a>
-      <a class="block mt-3" href="https://www.linkedin.com/in/aantipov">
-        linkedin.com/in/aantipov
-      </a>
-      <a class="block mt-3" href="https://twitter.com/_aantipov">
-        twitter.com/_aantipov
-      </a>
-      <a class="block mt-3" href="https://github.com/aantipov">
-        github.com/aantipov
-      </a>
+      <a
+        class="block mt-3"
+        href="https://twitter.com/_aantipov"
+        target="_blank"
+        rel="noopener"
+        >Twitter</a
+      >
+      <a
+        class="block mt-3"
+        href="https://github.com/aantipov"
+        target="_blank"
+        rel="noopener"
+        >GitHub</a
+      >
     </section>
 
     <section>

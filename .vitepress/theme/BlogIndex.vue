@@ -7,48 +7,14 @@
     <section class="mt-10 myprose">
       <h1 class="header">Posts</h1>
 
-      <!-- <article>
-        <h2>
-          <a href="/blog/widget-driven-development/"
-            >Widget Driven Development</a
-          >
-        </h2>
-        <p>
-          State Management in Frontend is complicated and approaches are not yet
-          settled. In search for a silver bullet, libraries authors come up with
-          different brilliant APIs and approaches. Developer Community has
-          produced guidelines for many scenarios. Nevertheless, developers
-          continue to struggle. Why is that? What do we miss?
-        </p>
+      <article v-for="article in articles">
+        <a :href="article.link" class="link">
+          <h2>
+            {{ article.title }}
+          </h2>
 
-        <a
-          class="link"
-          aria-label="read more"
-          href="/blog/state-management--separation-of-concerns/"
-          >Read more →</a
-        >
-      </article> -->
-
-      <article>
-        <h2>
-          <a href="/blog/state-management--separation-of-concerns/"
-            >State Management: Separation of Concerns</a
-          >
-        </h2>
-        <p>
-          State Management in Frontend is complicated and approaches are not yet
-          settled. In search for a silver bullet, libraries authors come up with
-          different brilliant APIs and approaches. Developer Community has
-          produced guidelines for many scenarios. Nevertheless, developers
-          continue to struggle. Why is that? What do we miss?
-        </p>
-
-        <a
-          class="link"
-          aria-label="read more"
-          href="/blog/state-management--separation-of-concerns/"
-          >Read more →</a
-        >
+          <p>{{ article.descr }}</p>
+        </a>
       </article>
     </section>
 
@@ -56,8 +22,31 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import posts from "../metadata.json";
+
+const articles = posts.map(({ title, href, summary }) => ({
+  title,
+  link: "/blog" + href,
+  descr: summary,
+}));
+</script>
+
 <style scoped>
+article {
+  @apply mb-20;
+}
 h2 {
   border: none;
+  @apply font-medium mb-4;
+}
+article a {
+  text-decoration: none;
+  @apply font-normal;
+  color: #374151;
+}
+article:hover h2,
+article:hover a {
+  @apply text-blue-700;
 }
 </style>
