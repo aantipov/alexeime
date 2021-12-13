@@ -84,14 +84,14 @@ Because the same data is usually needed by multiple different components, implem
 
 ## The Common parent approach
 
-We can overcome the problem by putting data-fetching and data-updating logic into a common parent component and passing data down to all underlying components.
+We learnt to overcome the problem by moving data-fetching (and mutation) functionality up to common parent components which pass data down to all underlying components.
 
 ![an image of Frontend and Backend interaction + Prop Drilling between Components](./prop-drilling.png)
 
-We solved the problem with requests duplication and data invalidation. But we got new problems in return:
+We solved the problem of requests duplication and data invalidation. However, we did face new challenges:
 
 - the whole application logic became more complex and more coupled
-- we have to pass data down through multiple components. That problem became notorious and got its own name [“Prop Drilling”](https://kentcdodds.com/blog/prop-drilling).
+- we were forced to pass data down through multiple components. This issue became notorious and got a name [“Prop Drilling”](https://kentcdodds.com/blog/prop-drilling).
 
 ## The State Management approach
 
