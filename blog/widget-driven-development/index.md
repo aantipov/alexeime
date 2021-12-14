@@ -111,9 +111,9 @@ The Prop Drilling issue was resolved, but not for free:
 
 ## The Naive approach reimagined
 
-Can we do better? Is there an easier way to approach data management? Can we have the data flow transparent and easy to understand? Can we untangle our applications and achieve better [orthogonality](https://www.freecodecamp.org/news/orthogonality-in-software-engineering/)?
+Can we do better? Is there an easier way to approach data management? Can we have the data flows transparent and easy to understand? Can we untangle our apps and boost [orthogonality](https://www.freecodecamp.org/news/orthogonality-in-software-engineering/)? Can we bring Data Logic under control of Components in the same way that we have done with Markup, Styles and UI Logic?
 
-It seems to me we just went too deep into the forest and _can't see the forest for the trees_. Let's go back to the starting point, to the Naive approach, and see if we can handle its problems differently.
+We must have gotten too far into the woods and _can't see the forest for the trees_. Let's go back to the starting point, to the Naive approach, and see if we can solve its problems differently.
 
 The main bummers there were requests duplication and data inconsistency.
 
@@ -121,19 +121,19 @@ What if we could have an intermediate player between our components and Backend,
 
 - deduplicate all the requests
 - ensure data consistency: all the components should always have the same data when using the same request
-- provide data invalidation ability: if a component changes data on the server, all the dependent components should get updated data
-- last, but not least, be transparent to the components and not affect their logic in any way (make components think they communicate to Backend directly)
+- provide data invalidation ability: if a component changes data on the server, other the components that rely on that data should receive the new data
+- be transparent to components and not affect their logic in any way (make components think they communicate to Backend directly)
 
 ![Frontend and Backend interaction using an API Wrapper](./api-wrapper.png)
 
-Turns out we can have it and there are already libraries providing such API Wrappers:
+The good news is that we can have it, and there are already libraries providing such solutions:
 
 - some GraphQL clients, e.g. [Relay](https://relay.dev/)
 - [React-Query](https://react-query.tanstack.com/), [SWR](https://swr.vercel.app/), [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview), [Vue Query](https://vue-query.vercel.app/) for RESTful APIs
 
 All we basically need to do is to wrap every API call with such an API Wrapper. The rest is handled automatically for us.
 
-The huge benefit of such an approach is that we can finally untangle our applications' data logic and achieve better orthogonality by combining all pieces together.
+The huge benefit of such an approach is that we can finally untangle our applications' data logic, put Data Logic under control of Components, and achieve better orthogonality by combining all pieces together.
 
 ![a triangle including Data Logic, Styles, Markup and UI Logic](./triangle.png)
 
