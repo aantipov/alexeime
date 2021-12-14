@@ -139,9 +139,9 @@ The huge benefit of such an approach is that we can finally untangle our applica
 
 ## Widget driven development
 
-In my team, we started to use the Naive approach described above and we love it a lot. It enabled us to approach building our application differently. Let me call it _"Widget Driven Development"_.
+In my team, we started to use the described above Naive approach together with React Query and we love it. It enabled us to approach building our application differently. Let me call it _"Widget Driven Development"_.
 
-The idea is that we split every page into so-called _widgets_, which are utterly independent and self-contained.
+The idea is that we split every page into so-called _widgets_, which behave autonomously and are self-contained.
 
 ![a Page separated into Widgets](./page.png)
 
@@ -200,7 +200,7 @@ Most of our widgets’ container components have no props and rely on no externa
 
 Such an approach makes it transparent what API queries our widget relies upon. That transparency combined with near to zero external dependencies makes it easy to test widgets and gives us confidence in our code.
 
-Usually, any changes to a widget are limited by that widget's folder. It significantly limits the risk of breaking any other parts of the application.
+Usually, changes to a widget are limited by modifications to files under that widget's folder. It significantly limits the risk of breaking any other parts of the application.
 
 Adding new widgets is also very straightforward: create a new folder for the widget with all required files in it and, if necessary, create a new query in the `/queries` folder. Again, the risk of breaking any other parts of the application is very limited.
 
@@ -213,4 +213,4 @@ It didn't solve all the problems though and Frontend applications often suffer f
 
 There are libraries that enable approaching Data Management differently and significantly reduce the complexity of our applications.
 
-Leveraging those libraries, we can integrate components with data logic essentially converting an application into a set of reusable self-contained widgets. It makes the data flows transparent, architecture agile, the code robust and easy to test.
+Leveraging those libraries, we can put data logic under control of components and convert an application into a set of reusable self-contained widgets. It makes the data flows transparent, architecture flexible, the code resilient and easy to test.
