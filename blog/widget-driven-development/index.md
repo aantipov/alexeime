@@ -95,14 +95,19 @@ We solved the problem of requests duplication and data invalidation. However, we
 
 ## The State Management approach
 
-Two avoid the Prop Drilling problem, we learned to use State Management libraries and techniques: instead of passing data to underlying components we put it in some Store which is directly available to all the components down the tree, so they can easily get the data from there. Components subscribe to the changes in the Store to always have up-to-date data.
+To bypass the Prop Drilling problem, we learnt to use State Management libraries and techniques: instead of propagating data down to underlying components, we place data in some Store that is accessible to all the components down the tree, letting them obtain the data directly from there. Components subscribe to the changes in the Store to have the data always up-to-date.
 
 ![an image of Frontend and Backend interaction + Global Store](./store.png)
 
-The Prop Drilling problem was solved but again we didn't get the solution for free:
+The Prop Drilling issue was resolved, but not for free:
 
-- we now have to deal with a completely new concept of the Store and care about a bunch of new things like designing and maintaining Store structure, properly updating data in the Store, mutable vs immutable. In addition, many state management libraries come with concepts like Actions, Reducers, Action Creators, Middlewares. Different patterns evolved around store management problems.
-- all the new concepts, vocabulary, and patterns complicated data management deeper. It became very tangled and coupled. Frustrated developers keep introducing new state management libraries with different syntax in hope of simplifying things.
+- we now have to deal with a completely new concept, the Store, and care about a bunch of new things, such as designing and maintaining Store structure, appropriately updating data in the Store, data normalization, mutable vs immutable, a single store vs multiple stores, and so on.
+
+- state management libraries require us to learn a new vocabulary: _Actions_, _Action Creators_, _Reducers_, _Middlewares_, _Thunks_, and so on.
+
+- the introduced complexity and lack of clarity forced developers to create [styleguides](https://redux.js.org/style-guide/style-guide) on how to work with the Store, what to do and what to avoid.
+
+- as a result, our applications became very tangled and coupled. Frustrated developers try to mitigate the issues by inventing new state management libraries with different syntax.
 
 ## The Naive approach reimagined
 
