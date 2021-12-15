@@ -121,7 +121,7 @@ What if we could have an intermediate player between our components and Backend,
 
 - deduplicate all the requests
 - ensure data consistency: all the components should always have the same data when using the same request
-- provide data invalidation ability: if a component changes data on the server, other the components that rely on that data should receive the new data
+- provide data invalidation ability: if a component changes data on the server, other components that rely on that data should receive the new data
 - be transparent to components and not affect their logic in any way (make components think they communicate to Backend directly)
 
 ![Frontend and Backend interaction using an API Wrapper](./api-wrapper.png)
