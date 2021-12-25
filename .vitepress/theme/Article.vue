@@ -5,15 +5,13 @@
     </header>
 
     <main class="mt-10 myprose">
-      <h1 class="header">{{ data.title }}</h1>
+      <h1 class="header">{{ frontmatter.title }}</h1>
 
-      <div class="text-center -mt-6 opacity-70">
-        {{ date }}
-        <span class="mx-3"> / </span>
-        {{ readTime }}
-      </div>
+      <ClientOnly>
+        <ArticleMeta />
+      </ClientOnly>
 
-      <Content class="mt-6" />
+      <Content />
     </main>
 
     <Footer />
@@ -22,14 +20,8 @@
 
 <script setup lang="ts">
 import { useData } from "vitepress";
-import { useReadTime } from "./useReadTime";
-const { frontmatter: data } = useData();
-const date = new Intl.DateTimeFormat("en-US", {
-  month: "long",
-  year: "numeric",
-  day: "numeric",
-}).format(new Date(data.value.date));
-const readTime = useReadTime();
+import ArticleMeta from "./ArticleMeta.vue";
+const { frontmatter } = useData();
 </script>
 
 <style scoped>
