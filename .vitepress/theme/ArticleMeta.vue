@@ -15,9 +15,3 @@ const post = posts.find(({ href }) => href === path) as {
   date: { string: string };
 };
 </script>
-
-<style scoped>
-.root :deep(h2) {
-  border: none;
-}
-</style>
