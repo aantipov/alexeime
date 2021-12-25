@@ -22,15 +22,15 @@ module.exports = {
 const cache = new Map();
 
 function getPost(file, postDir) {
-  const fullePath = path.join(postDir, file) + "/index.md";
-  const timestamp = fs.statSync(fullePath).mtimeMs;
+  const fullPath = path.join(postDir, file) + "/index.md";
+  const timestamp = fs.statSync(fullPath).mtimeMs;
 
-  const cached = cache.get(fullePath);
+  const cached = cache.get(fullPath);
   if (cached && timestamp === cached.timestamp) {
     return cached.post;
   }
 
-  const src = fs.readFileSync(fullePath, "utf-8");
+  const src = fs.readFileSync(fullPath, "utf-8");
   const stats = readingTime(src);
   const { data } = matter(src);
   const post = {
@@ -42,7 +42,7 @@ function getPost(file, postDir) {
     hidden: !!data.hidden,
   };
 
-  cache.set(fullePath, {
+  cache.set(fullPath, {
     timestamp,
     post,
   });
