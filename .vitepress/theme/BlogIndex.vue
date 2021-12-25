@@ -23,11 +23,11 @@
 </template>
 
 <script setup lang="ts">
-import posts from "../metadata.json";
+import { data as posts } from "../posts.data";
 
 const articles = posts.map(({ title, href, summary }) => ({
   title,
-  link: "/blog" + href,
+  link: href,
   descr: summary,
 }));
 </script>

@@ -22,7 +22,8 @@
     "src/**/*.ts",
     "src/**/*.vue",
     ".vitepress/**/*.vue",
-    ".vitepress/**/*.ts"
+    ".vitepress/**/*.ts",
+    ".vitepress/posts.data.js"
   ],
   "exclude": ["node_modules"]
 }
