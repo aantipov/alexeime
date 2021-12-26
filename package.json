@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vitepress",
     "build": "vitepress build",
-    "serve": "vitepress serve",
-    "metadata": "node ./.vitepress/genMetadata.js"
+    "serve": "vitepress serve"
   },
   "author": "Alexey Antipov",
   "devDependencies": {
