@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center -mt-6 opacity-70">
+  <div class="text-center opacity-70">
     {{ post.date.string }}
     <span class="mx-3"> / </span>
     {{ post.readTime }}

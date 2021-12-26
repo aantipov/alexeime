@@ -5,8 +5,7 @@ const readingTime = require("reading-time");
 
 module.exports = {
   watch: "../blog/**/*.md",
-  load(id) {
-    console.log(`Loading ${id}`);
+  load() {
     const postDir = path.resolve(__dirname, "../blog");
     return fs
       .readdirSync(postDir)
