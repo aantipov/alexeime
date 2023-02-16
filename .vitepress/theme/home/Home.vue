@@ -6,7 +6,7 @@
       <div>
         Hi &#128075;<br />
         My name is Alexey and I'm a father of two adorable living beings.<br />
-        I find my passion in JavaScript engineering. <br />
+        I find my passion in JavaScript engineering and exercising my leadership skills. <br />
         Love building and trying new things.
       </div>
       <div>
