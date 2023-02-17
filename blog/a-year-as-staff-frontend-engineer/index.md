@@ -1,37 +1,37 @@
 ---
 title: "A year as Staff Frontend Engineer"
 date: 2023-02-17
-summary: My reflections on changing my position from Senior Engineer to Staff Frontend Engineer
+summary: What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons.
 head:
   - - meta
     - name: description
-      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
+      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons."
   - - meta
     - property: og:description
-      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
+      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons."
   - - meta
     - name: twitter:description
-      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
+      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons."
   - - meta
     - property: og:image
-      content: "https://alexei.me/twitter/human-evolution.png"
+      content: "https://alexei.me/twitter/staff-engineer.png"
   - - meta
     - property: og:url
-      content: "https://alexei.me/blog/widget-driven-development/"
+      content: "https://alexei.me/blog/a-year-as-staff-frontend-engineer/"
   - - meta
     - name: twitter:image
-      content: "https://alexei.me/twitter/human-evolution.png"
+      content: "https://alexei.me/twitter/staff-engineer.png"
   - - meta
     - property: twitter:url
-      content: "https://alexei.me/blog/widget-driven-development/"
+      content: "https://alexei.me/blog/a-year-as-staff-frontend-engineer/"
 ---
 
-A year has passed since I joined Flink as a Staff Frontend Engineer.  
+A year has passed since I joined [Flink](https://www.goflink.com/) as a Staff Frontend Engineer.  
 Now is time to look back and reflect.  
   
 ## Intro
 
-When I was joining Flink I had no idea what the role is about. I bought a [book](# Staff Engineer: Leadership beyond the management track) which gave some insights about the responsibilities of Staff engineers, but the scope seemed too vague, and it wasn't clear how it would look in practice in my particular case and whether that position was for me.  
+When I was joining [Flink](https://www.goflink.com/), a [multi-billions](https://techcrunch.com/2021/12/09/flink-the-berlin-based-instant-grocery-startup-is-now-valued-at-2-85b-after-raising-750m-in-a-round-led-by-doordash/) valuated grocery delivery startup, I had no idea what the role is about. I bought a [book](https://staffeng.com/book) which gave some insights about the responsibilities of Staff engineers, but the scope seemed too vague, and it wasn't clear how it would look in practice in my particular case and whether that position was for me.  
   
 The change was intimidating and intriguing at the same time.
   
