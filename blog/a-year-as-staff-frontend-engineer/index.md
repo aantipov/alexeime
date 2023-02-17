@@ -31,21 +31,21 @@ Now is time to look back and reflect.
   
 ## Intro
 
-When I was joining [Flink](https://www.goflink.com/), a [multi-billions](https://techcrunch.com/2021/12/09/flink-the-berlin-based-instant-grocery-startup-is-now-valued-at-2-85b-after-raising-750m-in-a-round-led-by-doordash/) valuated grocery delivery startup, I had no idea what the role is about. I bought a [book](https://staffeng.com/book) which gave some insights about the responsibilities of Staff engineers, but the scope seemed too vague, and it wasn't clear how it would look in practice in my particular case and whether that position was for me.  
+When I was joining [Flink](https://www.goflink.com/), a grocery delivery startup with a [multi-billion](https://techcrunch.com/2021/12/09/flink-the-berlin-based-instant-grocery-startup-is-now-valued-at-2-85b-after-raising-750m-in-a-round-led-by-doordash/) dollar valuation, I had no idea what the role is about. I bought a [book](https://staffeng.com/book) that offered some insights about the responsibilities of Staff engineers, but the scope seemed too vague, I wasn't sure what I should actually be doing in practice and whether that position was right for me.  
   
 The change was intimidating and intriguing at the same time.
   
-Now, having worked for a year at that position, I can certainly say that it was one of the best decisions I made in life, and it was probably the most fruitful year of my career.  
+Now, having worked for a year at that position, I can certainly say that it was one of the best decisions I ever made, and it was probably the most fruitful year of my career.  
   
-During the year, I constantly dragged myself into new areas of work, and I learned and achieved a lot. I built confidence in aspects of work that I always thought were not for me and not in my comfort zone. I realized that there are many other things besides coding that I like and am very efficient at. My appetite grew a lot from one achievement to another.
+Over the course of the year, I constantly dragged myself into new areas of work, and I learned and achieved a lot. I built confidence in areas of work that I previously thought were not for me and not in my comfort zone. I discovered that I enjoy and am very good at a lot of other things besides coding. My appetite increased significantly as I made progress.
 
 ## Learnings
 
 ### Build relationships and earn credibility
 
-Right from the beginning, I worked on building relationships with my colleagues, especially frontend engineers, and earning their trust.  
+Right from the beginning, I focused on developing trusting relationships with my colleagues, especially with the frontend engineers.  
   
-I felt I needed to prove first that I can write code, that I care about quality, that I can provide thoughtful PR reviews, that I can help find bugs and fix them, that I have a broad knowledge of the frontend landscape, that I know what I'm doing, and that people can rely on me.
+I believed I had to first demonstrate my competence, my ability to write quality code, my ability to provide thoughtful PR reviews, my ability to help find bugs and fix them, and my being a person others can rely upon.
 
 Regular one-on-ones with developers also helped a lot in building relationships. It gave me the opportunity to learn about their struggles, their perspectives on things, and get their feedback on how I performed and how I could help them.
 
@@ -53,11 +53,11 @@ That helped me a lot going forward in implementing my initiatives and getting bu
   
 ### Don't be a bottleneck
 
-With a good, strong reputation, it's easy to become a bottleneck when people start approaching you directly looking for help. That way, other developers miss an opportunity to help and to learn, and you have to spend more time answering all kinds of questions.
+With a good, strong reputation, it's easy to become a bottleneck when people start approaching you directly looking for help. That way, other developers miss an opportunity to help and learn, and you end up spending more time answering questions of all kinds.
 
-Knowledge sharing is important, and whenever anyone needs help, other colleagues should have the opportunity to be helpful and learn from others' mistakes.
+Knowledge sharing is important, and whenever someone needs help, other colleagues should have the chance to provide help and learn from one another's mistakes.
 
-I created a dedicated channel for frontend engineers in slack and was constantly redirecting questions to that channel and promoting this channel.
+I created a dedicated Slack channel for frontend engineers, actively promoted it, and redirected questions there.
   
 ### Knowledge sharing and building a community
 
