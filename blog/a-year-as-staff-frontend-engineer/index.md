@@ -93,9 +93,9 @@ The lesson I learned here is to be conscious of who my manager is and make sure 
 
 ### Freedom
 
-The position gives me freedom - I am in charge of deciding what to work on. I don't have to work on boring and trivial tasks, like building ui forms, anymore. Instead, I focus on challenging, impactful, and full of learnings tasks where I can fully express my expertise and experience.
+The position gives me freedom - I am in charge of deciding what to work on. I am no longer required to perform tedious tasks, like building ui forms. Instead, I focus on challenging, impactful, and full of learnings tasks that let me fully utilize my knowledge and experience.
 
-Nobody expects me to write code myself and deliver something every day. That gives me time and peace of mind for deep thinking and evaluation of different ideas, to be creative, and to also invest time in people, work more with them, which I have started to like.
+Nobody expects me to write code myself and deliver something every day. That gives me time and peace of mind for deep thinking and evaluation of different ideas, to be creative, to work more with people, and to invest my time in them.
 
 A dream job, isn't it?
 
