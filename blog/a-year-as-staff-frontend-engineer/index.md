@@ -73,11 +73,11 @@ Going together to a conference was another thing I was pushing for. You learn ne
 
 ### Focus on impact and your expertize
 
-Whenever you are new to the company, it can be challenging to understand where to start and what to work on. The same challenge might come up even for company veterans. I was there as well.
+When you are new to the company, it can be challenging to understand where to start and what to work on. Even company veterans might face the same difficulty.
 
-I had moments where I wanted to join some backend focused initiatives just because they were interesting to me, and I didn't see interesting and impactful enough areas in frontend engineering. It was a trap, and I'm glad that I avoided it.
+It happened to me as well. I once joined some backend-focused initiative purely out of interest because I did not see interesting and impactful enough areas in frontend engineering. It was a trap, and I am glad that I escaped it.
 
-What helped me in such moments of doubt was reminding myself that I'm the most !!!knowledgeable!!! frontend engineer in the company and that there definitely should be something for me in my area of expertise and interests. With that in mind, I explored what was happening in other domains (departments) and their struggles and issues, and, as a result, I moved to another department that needed my help. At the same time, I challenged the status quo in my old department and came up with an initiative to create a web platform team and become a product manager for that team.
+What helped me during such moments of doubt was reminding myself that I am a very knowledgeable and experienced frontend engineer and that it would be a shame for the company not to make use of it. There must be something in my area of expertise and interests for me. With that in mind, I explored what was happening in other domains (departments) and what struggles and issues they had. The result of it was me moving to a department in need. I also challenged the status quo in my former department and came up with organizational changes - formation of a web platform team and the transfer of certain projects under its ownership.
 
 ### Care about who is your manager
 
