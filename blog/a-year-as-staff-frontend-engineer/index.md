@@ -79,15 +79,15 @@ It happened to me as well. I once joined some backend-focused initiative purely 
 
 What helped me during such moments of doubt was reminding myself that I am a very knowledgeable and experienced frontend engineer and that it would be a shame for the company not to make use of it. There must be something in my area of expertise and interests for me. With that in mind, I explored what was happening in other domains (departments) and what struggles and issues they had. The result of it was me moving to a department in need. I also challenged the status quo in my former department and came up with organizational changes - formation of a web platform team and the transfer of certain projects under its ownership.
 
-### Care about who is your manager
+### Your manager is your advocate
 
 The work you do as a Staff Engineer might not be directly visible to the rest of the company. There can be no direct relationship between your work and the company's performance.
 
-For example, how can you quantify the impact you are creating by building a frontend community, setting up a proper interview process, and hiring best-in-class developers?
+For example, how can you quantify the impact you are making by building a frontend community, setting up a proper interview process, and hiring best-in-class developers?
 
-Also, if your manager is responsible for a particular domain and your work exceeds by far the scope of that domain, it can be hard for your manager to see the real value of your work for a company.
+It can also be challenging for your manager to properly assess your work if they are in charge of a specific domain and your work far exceeds the scope of that domain. They won't be a good advocate for you, and it can hinder your growth and career.
 
-As I realized, that can become a real problem for my future growth and career. The lesson I learned here is to be conscious of who is your manager and make sure they are interested in the work you do and that your reporting line makes sense at all.
+The lesson I learned here is to be conscious of who my manager is and make sure they are interested in the work I do and that my work is transparent to them.
 
 ## What I like about my work
 
