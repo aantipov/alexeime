@@ -61,13 +61,15 @@ I created a dedicated Slack channel for frontend engineers, actively promoted it
   
 ### Knowledge sharing and building a community
 
-Often, organizational structure doesn't promote cross-team or cross-department collaboration. Developers work on their projects in isolation which negatively affects their company because the same solutions are constantly being re-implemented and the same issues occur across different projects. Lack of collaboration also means fewer opportunities to learn and grow, which leads to dissatisfaction and a poor retention rate.
+Often, organizational structure doesn't facilitate cross-team or cross-department collaboration. Developers work on their projects in isolation, which negatively affects their company because the same solutions are constantly being re-implemented and the same issues occur across different projects. Lack of collaboration also means fewer opportunities to learn and grow, which leads to dissatisfaction and a poor retention rate.
 
-I realized that it's very important to build a strong frontend community where developers can be excited about their work, share knowledge, help each other, and have common things to work on.
+I had been there myself, and I believed that it's very important to build a strong frontend community where developers could be passionate about their work, share knowledge, support one another, and collaborate on shared libraries and projects.
 
-My approach was to set up regular frontend meetups and push developers to present their topics there - to share what issues they have fixed and things they are excited about. I myself regularly shared important information about the company's web landscape, hosting solutions, caching issues, etc.
+I organized regular frontend meetups and encouraged developers to present their topics there - to share what issues they have fixed and things they are excited about. I myself regularly shared important information about the company's web landscape, hosting solutions, caching issues, etc.
 
-Also, I was looking for opportunities to create common ground for all projects - creating utilities and libraries used by all projects across the company. That gives developers an opportunity to create an impact on the whole organization and creates a space for collaboration with other developers.
+I was also looking for opportunities to standardize infrastructure in use and create libraries and tools used by all projects across the company. Besides the obvious benefits of infrastructure reuse and code deduplication, this would give developers common ground to work on, provide an opportunity to create an impact on the whole organization, and create a space for collaboration with other developers. Additionally, switching between projects and onboarding new developers would be simplified.
+
+Going together to a conference was another thing I was pushing for. You learn new things, get inspired, and become friends with your colleagues. That, in my opinion, is the best use of the development budget. We attended the React Day Berlin and VueJS Amsterdam conferences.
 
 ### Focus on impact and your expertize
 
