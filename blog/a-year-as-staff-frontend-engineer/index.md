@@ -109,9 +109,9 @@ Freedom and Power combined make me extremely happy and enable me to be as impact
 
 ### Writing code
 
-With Freedom and Power in my hands, writing code myself would restrict my impact and, as a result, my value for a company. It doesn't scale. To be more impactful, I need to focus on things that scale, for example, leveling up other developers.
+All pre-Staff positions add value to a company primarily by writing code and implementing features themselves. Staff Engineer position bestow Freedom and Power on you to bring far more value. How? By implementing things that scale, i.e., enabling engineers to do their job, helping them, couching them, redirecting their focus to more important tasks, coming up with architectural changes, and bringing highly skilled developers aboard.
 
-As a result, I have to write less code myself, and that is one of the things I don't like about the position of Staff engineer. You should be an expert in your area, but you have less time for hands-on experience. You should find the right balance here.
+As a result, I write less code myself, which is something I wish I could do more of. Although I should be an expert in my field, I don't have as much time for practice now. Finding the right balance is important.
 
 ## Conclusion
 
@@ -119,4 +119,4 @@ Changing my position from Senior to Staff Frontend engineer was a tremendous shi
 
 It has been a very fruitful, exciting, and full of learnings experience.
 
-It allowed me to apply my knowledge and skills at scale.
+I was able to apply my knowledge and experience on a large scale, and my skill set expanded.
