@@ -5,13 +5,13 @@ summary: What does it mean to be a Staff Frontend Engineer? My thoughts after a 
 head:
   - - meta
     - name: description
-      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons."
+      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned."
   - - meta
     - property: og:description
-      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons."
+      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned."
   - - meta
     - name: twitter:description
-      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons."
+      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned."
   - - meta
     - property: og:image
       content: "https://alexei.me/twitter/staff-engineer.png"
