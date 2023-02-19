@@ -26,6 +26,8 @@ head:
       content: "https://alexei.me/blog/a-year-as-staff-frontend-engineer/"
 ---
 
+![Staff Engineer](./staff-engineer.png)
+
 A year has passed since I joined [Flink](https://www.goflink.com/) as a Staff Frontend Engineer.  
 Now is time to look back and reflect.  
   
