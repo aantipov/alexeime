@@ -63,4 +63,4 @@ I learned about the existence of the "Beitragsbemessungsgrenze", which translate
 
 As my salary surpassed these values, the Employment Agency used these threshold values instead of my actual salary to calculate the benefits. After deducting social contributions and taxes, 67% of the remaining amount was designated as my unemployment benefit.
 
-As a result, the actual value of the benefits amounted to roughly 50% of my net salary (after taxes and social contributions). Unfortunately, this amount doesn't cover my family's basic expenses, forcing me to dip further into my savings.
+**As a result, the actual value of the benefits amounted to roughly 50% of my net salary (after taxes and social contributions). Unfortunately, this amount doesn't cover my family's basic expenses, forcing me to dip further into my savings.**
