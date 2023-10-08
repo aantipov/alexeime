@@ -1,11 +1,23 @@
-node_modules
-.vitepress/dist
+# build output
+dist/
+.output/
+.astro
 
-# NPM
-*.log
+# dependencies
+node_modules/
 
-# OS generated stuff
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+.vscode/
+
+# macOS-specific files
 .DS_Store
-.DS_Store?
-ehthumbs.db
-Thumbs.db

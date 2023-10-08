@@ -1,0 +1,53 @@
+/* Typography */
+
+.blog-article p {
+  @apply my-6 text-lg;
+}
+
+.blog-article h2 {
+  @apply my-6 text-3xl font-bold;
+}
+
+.blog-article h3 {
+  @apply my-6 text-2xl font-bold;
+}
+
+.blog-article ul {
+  @apply my-6 list-inside list-disc;
+}
+
+.blog-article ul li {
+  @apply my-1;
+}
+
+.blog-article a {
+  @apply text-blue-400 underline hover:text-blue-600;
+}
+
+.blog-article img {
+  max-height: 80vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-article pre {
+  @apply rounded-md p-4;
+}
+
+.blog-article p code,
+.blog-article ul li code {
+  @apply rounded-md bg-slate-700 p-1 font-mono text-sm font-medium;
+  &::before {
+    content: "`";
+  }
+  &::after {
+    content: "`";
+  }
+}
+
+.blog-article blockquote {
+  @apply my-6 border-l-4 border-slate-700 pl-4;
+}

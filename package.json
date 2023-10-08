@@ -1,21 +1,28 @@
 {
-  "name": "alexei.me",
-  "version": "1.0.0",
-  "private": true,
-  "description": "personal website",
+  "name": "alexey-antipov",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vitepress",
-    "build": "vitepress build",
-    "serve": "vitepress serve . --port 3001"
-  },
-  "author": "Alexey Antipov",
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.4.1",
-    "gray-matter": "^4.0.3",
-    "reading-time": "^1.5.0",
-    "vitepress": "^0.20.9"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "tailwindcss": "^2.2.16"
+    "@astrojs/react": "^3.0.3",
+    "@astrojs/tailwind": "^5.0.1",
+    "@fontsource/inter": "^4.5.15",
+    "astro": "^3.2.3",
+    "framer-motion": "^10.11.2",
+    "npm-check-updates": "^16.10.7",
+    "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-tailwindcss": "^0.5.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
