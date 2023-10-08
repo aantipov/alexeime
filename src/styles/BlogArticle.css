@@ -1,7 +1,7 @@
 /* Typography */
 
 .blog-article p {
-  @apply my-6 text-lg;
+  @apply my-6;
 }
 
 .blog-article h2 {
@@ -33,19 +33,23 @@
   margin-right: auto;
 }
 
-.blog-article pre {
+.blog-article pre.astro-code {
   @apply rounded-md p-4;
+}
+
+.blog-article pre.astro-code code {
+  @apply text-base;
 }
 
 .blog-article p code,
 .blog-article ul li code {
-  @apply rounded-md bg-slate-700 p-1 font-mono text-sm font-medium;
+  @apply rounded-md bg-slate-700 p-1 font-mono font-medium;
 }
 .blog-article ul li code::before {
-    content: "`";
+  content: "`";
 }
 .blog-article ul li code::after {
-    content: "`";
+  content: "`";
 }
 
 .blog-article blockquote {

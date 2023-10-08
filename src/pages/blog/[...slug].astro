@@ -31,24 +31,20 @@ const { Content } = await post.render();
     class="blog-article hero-bg-gradient flex w-screen items-center justify-center bg-customDarkBg1 pb-24 pt-16 sm:pb-32 md:pb-44 md:pt-16 lg:pb-24 lg:pt-24"
   >
     <article
-      class="flex w-full flex-col items-center justify-center text-center md:w-[800px] xl:w-[900px]"
+      class="flex w-full flex-col items-center justify-center px-6 text-center sm:px-24 md:w-[800px] xl:w-[900px]"
     >
-      <main class="max-w-full">
-        <div
-          class="mt-10 px-12 text-sm font-normal text-customGrayText sm:px-48 sm:text-base lg:text-base"
-        >
-          <FormattedDate date={post.data.date} />
-        </div>
-        <h1 class="mt-2 px-16 text-5xl text-slate-200">{post.data.title}</h1>
-        <div class="hero-image">
-          <!-- {heroImage && <img width={1020} height={510} src={heroImage} alt="" />} -->
-        </div>
-        <div
-          class="mt-4 px-12 text-left text-sm font-normal text-slate-200 sm:px-12 sm:text-base lg:text-lg xl:text-lg"
-        >
-          <Content />
-        </div>
-      </main>
+      <div
+        class="mt-10 text-sm font-normal text-customGrayText sm:px-48 sm:text-base lg:text-base"
+      >
+        <FormattedDate date={post.data.date} />
+      </div>
+      <h1 class="mt-2 text-4xl text-slate-200">{post.data.title}</h1>
+
+      <div
+        class="mt-4 max-w-full text-left text-lg font-normal text-slate-200 sm:text-xl"
+      >
+        <Content />
+      </div>
     </article>
   </main>
   <Footer />
