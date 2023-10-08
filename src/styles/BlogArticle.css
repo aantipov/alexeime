@@ -40,12 +40,12 @@
 .blog-article p code,
 .blog-article ul li code {
   @apply rounded-md bg-slate-700 p-1 font-mono text-sm font-medium;
-  &::before {
+}
+.blog-article ul li code::before {
     content: "`";
-  }
-  &::after {
+}
+.blog-article ul li code::after {
     content: "`";
-  }
 }
 
 .blog-article blockquote {
