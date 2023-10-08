@@ -16,26 +16,34 @@ const { title, description } = Astro.props;
 // TODO: check Twitter and Open Graph info
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title}</title>
-    <meta name="description" content={description}>
+    <meta name="description" content={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="yandex-verification" content="43c31257b999cf8f" />
-    <meta  name="google-site-verification" content="1il8t6RCN1ZCQgcM2ATT6Lt1rZX4XIbAZUKuW84AqPo" />
+    <meta
+      name="google-site-verification"
+      content="1il8t6RCN1ZCQgcM2ATT6Lt1rZX4XIbAZUKuW84AqPo"
+    />
     <meta name="copyright" content="2009-2023, Alexey Antipov" />
     <meta name="twitter:creator" content="@_aantipov" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Alexey Antipov" />
+    <meta name="twitter:image" content="https://alexei.me/twitter/avatar.jpg" />
     <meta name="og:title" content="Alexey Antipov" />
-    <script async="true" defer="true" data-domain="alexei.me" src="https://plausible.io/js/plausible.js" />
+    <script
+      async="true"
+      defer="true"
+      data-domain="alexei.me"
+      src="https://plausible.io/js/plausible.js"></script>
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
