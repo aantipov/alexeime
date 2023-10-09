@@ -24,7 +24,8 @@ const { Content } = await post.render();
 
 <Layout
   title="Home | Alexey Antipov"
-  description="Webdev Consultant & Mentor | React & Vue Expert | Team builder | ex. Flink, Zalando"
+  descr={post.data.desc}
+  image={post.data.image}
 >
   <Navbar client:load />
   <main

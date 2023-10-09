@@ -2,28 +2,8 @@
 title: "I'm receiving Unemployment Benefits in Germany"
 date: 2023-09-17
 summary: Being affected by a layoff at work, I stepped into the area of German unemployment benefits. Here, I share my personal journey to help guide others.
-head:
-  - - meta
-    - name: description
-      content: "Explore the realities of unemployment benefits in Germany through a personal journey amid tech industry layoffs. A guide to financial expectations and procedural steps."
-  - - meta
-    - property: og:description
-      content: "Explore the realities of unemployment benefits in Germany through a personal journey amid tech industry layoffs. A guide to financial expectations and procedural steps."
-  - - meta
-    - name: twitter:description
-      content: "Explore the realities of unemployment benefits in Germany through a personal journey amid tech industry layoffs. A guide to financial expectations and procedural steps."
-  - - meta
-    - property: og:image
-      content: "https://alexei.me/twitter/layoff.png"
-  - - meta
-    - property: og:url
-      content: "https://alexei.me/blog/i-am-receiving-unemployment-benefits-in-germany/"
-  - - meta
-    - name: twitter:image
-      content: "https://alexei.me/twitter/layoff.png"
-  - - meta
-    - property: twitter:url
-      content: "https://alexei.me/blog/i-am-receiving-unemployment-benefits-in-germany/"
+desc: Explore the realities of unemployment benefits in Germany through a personal journey amid tech industry layoffs. A guide to financial expectations and procedural steps.
+image: og/layoff.png
 ---
 
 ![the letter from german empoloyment agency](./letter.jpg)

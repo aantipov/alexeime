@@ -2,28 +2,8 @@
 title: "Widget Driven Development"
 date: 2021-12-14
 summary: How we can achieve better decomposition in Frontend applications by leveraging streamlined Data Management.
-head:
-  - - meta
-    - name: description
-      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
-  - - meta
-    - property: og:description
-      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
-  - - meta
-    - name: twitter:description
-      content: "Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management"
-  - - meta
-    - property: og:image
-      content: "https://alexei.me/twitter/human-evolution.png"
-  - - meta
-    - property: og:url
-      content: "https://alexei.me/blog/widget-driven-development/"
-  - - meta
-    - name: twitter:image
-      content: "https://alexei.me/twitter/human-evolution.png"
-  - - meta
-    - property: twitter:url
-      content: "https://alexei.me/blog/widget-driven-development/"
+desc: Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management
+image: og/human-evolution.png
 ---
 
 ![Evolution of Frontend: from "Before Componets" to "Components" to "Widgets](./human-evolution.png)

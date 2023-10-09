@@ -2,28 +2,8 @@
 title: "A year as Staff Frontend Engineer"
 date: 2023-02-19
 summary: What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned.
-head:
-  - - meta
-    - name: description
-      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned."
-  - - meta
-    - property: og:description
-      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned."
-  - - meta
-    - name: twitter:description
-      content: "What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned."
-  - - meta
-    - property: og:image
-      content: "https://alexei.me/twitter/staff-engineer.png"
-  - - meta
-    - property: og:url
-      content: "https://alexei.me/blog/a-year-as-staff-frontend-engineer/"
-  - - meta
-    - name: twitter:image
-      content: "https://alexei.me/twitter/staff-engineer.png"
-  - - meta
-    - property: twitter:url
-      content: "https://alexei.me/blog/a-year-as-staff-frontend-engineer/"
+desc: What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned.
+image: og/staff-engineer.png
 ---
 
 ![Staff Engineer](./staff-engineer.png)

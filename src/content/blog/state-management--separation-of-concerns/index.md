@@ -2,28 +2,8 @@
 title: "State Management: Separation of Concerns"
 date: 2021-11-10
 summary: How application of Separation of Concerns principle can simplify State Management in Frontend.
-head:
-  - - meta
-    - name: description
-      content: "How Separation of Concerns can help resolve the never-ending State Management fatigue"
-  - - meta
-    - property: og:description
-      content: "How Separation of Concerns can help resolve the never-ending State Management fatigue"
-  - - meta
-    - name: twitter:description
-      content: "How Separation of Concerns can help resolve the never-ending State Management fatigue"
-  - - meta
-    - property: og:image
-      content: "https://alexei.me/twitter/state-managment-separation-concerns.jpg"
-  - - meta
-    - property: og:url
-      content: "https://alexei.me/blog/state-management--separation-of-concerns/"
-  - - meta
-    - name: twitter:image
-      content: "https://alexei.me/twitter/state-managment-separation-concerns.jpg"
-  - - meta
-    - property: twitter:url
-      content: "https://alexei.me/blog/state-management--separation-of-concerns/"
+desc: How Separation of Concerns can help resolve the never-ending State Management fatigue
+image: og/state-managment-separation-concerns.jpg
 ---
 
 ![a picture to bring attention](./crack.jpg)
