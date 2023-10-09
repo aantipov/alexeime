@@ -25,7 +25,7 @@ const { Content } = await post.render();
 <Layout
   title={post.data.title + " | Alexey Antipov"}
   desc={post.data.desc}
-  image={post.data.image}
+  image={post.data.image.src}
 >
   <Navbar client:load currentPath={Astro.url.pathname} />
   <main

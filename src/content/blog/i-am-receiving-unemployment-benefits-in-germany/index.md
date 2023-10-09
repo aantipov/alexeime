@@ -3,7 +3,7 @@ title: "I'm receiving Unemployment Benefits in Germany"
 date: 2023-09-17
 summary: Being affected by a layoff at work, I stepped into the area of German unemployment benefits. Here, I share my personal journey to help guide others.
 desc: Explore the realities of unemployment benefits in Germany through a personal journey amid tech industry layoffs. A guide to financial expectations and procedural steps.
-image: og/layoff.png
+image: ./og.png
 ---
 
 ![the letter from german empoloyment agency](./letter.jpg)

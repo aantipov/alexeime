@@ -15,7 +15,7 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, desc, image = "/og/avatar.jpg" } = Astro.props;
+const { title, desc, image = "/avatar.jpg" } = Astro.props;
 const imageUrl = new URL(image, Astro.url.origin);
 const today = new Date();
 ---
