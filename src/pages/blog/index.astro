@@ -6,7 +6,6 @@ import { Navbar } from "@/components/Navbar.tsx";
 import { getCollection } from "astro:content";
 
 import "../../styles/Theme.css";
-import "../../styles/Diagonals.css";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
