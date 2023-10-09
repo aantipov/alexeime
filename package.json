@@ -1,7 +1,13 @@
 {
-  "name": "alexey-antipov",
+  "name": "alexey.me",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
+  "description": "personal website",
+  "author": {
+    "name": "Alexey",
+    "email": "antipov.alexei@gmail.com"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
