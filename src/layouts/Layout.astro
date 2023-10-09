@@ -9,13 +9,13 @@ import "@fontsource/inter/900.css";
 
 interface Props {
   title: string;
-  descr: string;
+  desc: string;
   image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, descr, image = "/og/avatar.jpg" } = Astro.props;
+const { title, desc, image = "/og/avatar.jpg" } = Astro.props;
 const imageUrl = new URL(image, Astro.url.origin);
 const today = new Date();
 ---
@@ -49,20 +49,20 @@ const today = new Date();
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
-    <meta name="description" content={descr} />
+    <meta name="description" content={desc} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={descr} />
+    <meta property="og:description" content={desc} />
     <meta property="og:image" content={imageUrl} />
 
     <!-- Twitter -->
     <meta name="twitter:creator" content="@_aantipov" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={descr} />
+    <meta property="twitter:description" content={desc} />
     <meta property="twitter:image" content={imageUrl} />
 
     <!-- Search Engines Verification + Analytics -->

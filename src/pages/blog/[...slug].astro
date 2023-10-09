@@ -23,8 +23,8 @@ const { Content } = await post.render();
 ---
 
 <Layout
-  title="Home | Alexey Antipov"
-  descr={post.data.desc}
+  title={post.data.title + " | Alexey Antipov"}
+  desc={post.data.desc}
   image={post.data.image}
 >
   <Navbar client:load />
