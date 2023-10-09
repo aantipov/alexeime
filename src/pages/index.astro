@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
 import { Hero } from "@components/Hero.jsx";
-import { Navbar } from "@components/Navbar.jsx";
+import { Navbar } from "@/components/Navbar.jsx";
 import { ScrollUpButton } from "@components/ScrollUpButton";
 import "../styles/Theme.css";
 import "../styles/Diagonals.css";
@@ -12,7 +12,7 @@ import "../styles/Diagonals.css";
   title="Home | Alexey Antipov"
   desc="Webdev Consultant & Mentor | React & Vue Expert | Team builder | ex. Flink, Zalando"
 >
-  <Navbar client:load />
+  <Navbar client:load currentPath={Astro.url.pathname} />
   <Hero client:load />
   <Footer />
   <ScrollUpButton client:load />
