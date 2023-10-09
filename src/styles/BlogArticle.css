@@ -43,7 +43,7 @@
 
 .blog-article p code,
 .blog-article ul li code {
-  @apply rounded-md bg-slate-700 p-1 font-mono font-medium;
+  @apply rounded-md bg-slate-700 p-1 font-mono text-sm font-medium;
 }
 .blog-article ul li code::before {
   content: "`";

@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { InvitationModal } from "./InvitationModal";
 
 export const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <section
       className="hero-bg-gradient flex w-screen items-center justify-center bg-customDarkBg1"
@@ -161,9 +157,6 @@ export const Hero = () => {
           </div>
         </motion.div>
       </div>
-      {isModalOpen && (
-        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )}
     </section>
   );
 };
