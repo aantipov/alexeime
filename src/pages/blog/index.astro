@@ -15,6 +15,7 @@ const posts = (await getCollection("blog")).sort(
 <Layout
   title="Blog | Alexey Antipov"
   desc="Alexey's Blog. Frontend Engineering"
+  twitterCard="summary"
 >
   <Navbar client:load currentPath={Astro.url.pathname} />
   <main
