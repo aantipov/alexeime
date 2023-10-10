@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import myImage from "@assets/images/me.jpg";
+import React from "react";
 
 const navbarLinks = [
   { label: "Home", href: "/", ariaLabel: "Home" },
-  { label: "Blog", href: "/blog", ariaLabel: "Blog" },
+  { label: "Blog", href: "/blog/", ariaLabel: "Blog" },
 ];
 
 type Props = {
@@ -14,7 +15,7 @@ type Props = {
 export const Navbar = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { currentPath } = props;
-  function getActiveLinkClass(path) {
+  function getActiveLinkClass(path: string) {
     return path === currentPath ? "underline font-extrabold" : "";
   }
 

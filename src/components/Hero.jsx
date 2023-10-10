@@ -144,12 +144,7 @@ export const Hero = () => {
                 </a>
               </li>
               <li className="bold pt-3">
-                <a
-                  href="/blog"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold underline"
-                >
+                <a href="/blog/" className="font-bold underline">
                   On my Blog
                 </a>
               </li>
