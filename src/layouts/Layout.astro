@@ -11,11 +11,17 @@ interface Props {
   title: string;
   desc: string;
   image?: string;
+  twitterCard?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, desc, image = "/avatar.jpg" } = Astro.props;
+const {
+  title,
+  desc,
+  image = "/avatar.jpg",
+  twitterCard = "summary_large_image",
+} = Astro.props;
 const imageUrl = new URL(image, Astro.url.origin);
 const today = new Date();
 ---
@@ -59,7 +65,7 @@ const today = new Date();
 
     <!-- Twitter -->
     <meta name="twitter:creator" content="@_aantipov" />
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:card" content={twitterCard} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={desc} />
     <meta property="twitter:image" content={imageUrl} />
