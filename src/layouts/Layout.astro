@@ -1,0 +1,90 @@
+---
+// Import fonts
+import "@fontsource/inter";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/inter/900.css";
+
+interface Props {
+  title: string;
+  desc: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, desc, image = "/avatar.jpg" } = Astro.props;
+const imageUrl = new URL(image, Astro.url.origin);
+const today = new Date();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="copyright"
+      content={`2009-${today.getFullYear()}, Alexey Antipov`}
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Font preloads -->
+    <!-- <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin /> -->
+    <!-- <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin /> -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={desc} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={imageUrl} />
+
+    <!-- Twitter -->
+    <meta name="twitter:creator" content="@_aantipov" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={desc} />
+    <meta property="twitter:image" content={imageUrl} />
+
+    <!-- Search Engines Verification + Analytics -->
+    <meta name="yandex-verification" content="43c31257b999cf8f" />
+    <meta
+      name="google-site-verification"
+      content="1il8t6RCN1ZCQgcM2ATT6Lt1rZX4XIbAZUKuW84AqPo"
+    />
+    <script
+      async="true"
+      defer="true"
+      data-domain="alexei.me"
+      src="https://plausible.io/js/plausible.js"></script>
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      html {
+        font-family: Inter;
+        background-color: #26272b;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </body>
+</html>

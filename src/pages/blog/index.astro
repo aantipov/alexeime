@@ -1,0 +1,47 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import { Navbar } from "@/components/Navbar.tsx";
+import { getCollection } from "astro:content";
+
+import "../../styles/Theme.css";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+---
+
+<Layout
+  title="Blog | Alexey Antipov"
+  desc="Alexey's Blog. Frontend Engineering"
+>
+  <Navbar client:load currentPath={Astro.url.pathname} />
+  <main
+    class="hero-bg-gradient flex w-screen items-center justify-center bg-customDarkBg1 pb-24 pt-16 sm:pb-32 md:pb-44 md:pt-16 lg:pb-24 lg:pt-24"
+  >
+    <section
+      class="flex w-full flex-col items-center justify-center text-center md:w-[800px] xl:w-[900px]"
+    >
+      <h1 class="mt-16 text-4xl text-slate-200">Posts</h1>
+      {
+        posts.map((post) => (
+          <article class="mb-8 px-8 text-sm font-bold sm:mt-4 sm:text-base">
+            <a href={`/blog/${post.slug}/`}>
+              <p class="mt-10 text-sm font-normal text-customGrayText sm:px-48 sm:text-base lg:text-base">
+                <FormattedDate date={post.data.date} />
+              </p>
+              <h2 class="mt-2 text-2xl text-customSecondary">
+                {post.data.title}
+              </h2>
+              <div class="mt-4 text-left text-base font-normal text-slate-200 sm:px-20 sm:text-base lg:text-lg xl:text-lg">
+                {post.data.summary}
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </section>
+  </main>
+  <Footer />
+</Layout>

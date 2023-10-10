@@ -1,0 +1,26 @@
+/* Backgrounds */
+
+body,
+html {
+  @apply bg-customDarkBg2;
+}
+
+/* Borders */
+
+.custom-border-gray {
+  @apply border border-solid border-[rgb(255,255,255,0.15)];
+}
+.custom-border-gray-darker {
+  @apply border border-solid border-[rgb(255,255,255,0.07)];
+}
+
+/* Navbar */
+
+.navbar-link {
+  @apply ml-4 mr-4 h-full  cursor-pointer pt-2 text-2xl   font-normal leading-6 text-white transition duration-300 hover:scale-110 lg:text-base lg:font-medium 2xl:ml-6 2xl:mr-6;
+}
+
+/* Preventing FOUC */
+@font-face {
+  font-display: var(--fontsource-Inter-font-display, optional);
+}
