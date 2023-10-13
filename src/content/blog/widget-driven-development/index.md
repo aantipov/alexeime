@@ -4,9 +4,9 @@ date: 2021-12-14
 summary: How we can achieve better decomposition in Frontend applications by leveraging streamlined Data Management.
 desc: Decomposition of UI applications into self-contained widgets leveraging streamlined Data Management
 image: ./og.png
+heroImage: ./human-evolution.png
+heroAlt: 'Evolution of Frontend: from "Before Componets" to "Components" to "Widgets'
 ---
-
-![Evolution of Frontend: from "Before Componets" to "Components" to "Widgets](./human-evolution.png)
 
 ## Preface
 

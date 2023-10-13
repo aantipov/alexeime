@@ -4,9 +4,9 @@ date: 2021-11-10
 summary: How application of Separation of Concerns principle can simplify State Management in Frontend.
 desc: How Separation of Concerns can help resolve the never-ending State Management fatigue
 image: ./og.jpg
+heroImage: ./crack.jpg
+heroAlt: a picture to bring attention
 ---
-
-![a picture to bring attention](./crack.jpg)
 
 State Management in Frontend is complicated and approaches are not yet settled. New state management libraries keep popping up. In search for a silver bullet, libraries and frameworks authors come up with different brilliant APIs and approaches. Developer Community has produced guidelines for many scenarios.
 
