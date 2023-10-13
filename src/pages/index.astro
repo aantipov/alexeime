@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
 import { Hero } from "@components/Hero.jsx";
-import { Navbar } from "@/components/Navbar.tsx";
+import Navbar from "@/components/Navbar.astro";
 import { ScrollUpButton } from "@components/ScrollUpButton";
 import "../styles/Theme.css";
 ---
@@ -14,7 +14,7 @@ import "../styles/Theme.css";
   ogDesc="Unlock scalable, resilient web solutions with 15 years of frontend engineering experience. Let's grow your team and project!"
   twitterCard="summary"
 >
-  <Navbar client:load currentPath={Astro.url.pathname} />
+  <Navbar />
   <Hero client:load />
   <Footer />
   <ScrollUpButton client:load />

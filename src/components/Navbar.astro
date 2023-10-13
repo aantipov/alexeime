@@ -1,0 +1,15 @@
+---
+import { NavbarContents } from "@/components/Navbar.tsx";
+import { Image } from "astro:assets";
+import avatar from "@assets/images/me.jpg";
+---
+
+<NavbarContents client:load currentPath={Astro.url.pathname}>
+  <Image
+    src={avatar}
+    width={100}
+    alt="picture of me"
+    loading="eager"
+    class="custom-border-gray h-full w-full rounded-xl object-contain"
+  />
+</NavbarContents>
