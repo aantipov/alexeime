@@ -4,9 +4,9 @@ date: 2023-09-17
 summary: Being affected by a layoff at work, I stepped into the area of German unemployment benefits. Here, I share my personal journey to help guide others.
 desc: Explore the realities of unemployment benefits in Germany through a personal journey amid tech industry layoffs. A guide to financial expectations and procedural steps.
 image: ./og.png
+heroImage: ./letter.jpg
+heroAlt: the letter from german empoloyment agency
 ---
-
-![the letter from german empoloyment agency](./letter.jpg)
 
 Two days ago, I received a document from the German Agentur für Arbeit approving my claim for unemployment benefits.
 

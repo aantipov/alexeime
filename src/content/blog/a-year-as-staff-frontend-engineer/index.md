@@ -4,9 +4,9 @@ date: 2023-02-19
 summary: What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned.
 desc: What does it mean to be a Staff Frontend Engineer? My thoughts after a year of working as a Staff Frontend Engineer. What I liked and didn't like. The lessons I learned.
 image: ./og.png
+heroImage: ./staff-engineer.png
+heroAlt: Staff Engineer drawing
 ---
-
-![Staff Engineer](./staff-engineer.png)
 
 A year has passed since I joined [Flink](https://www.goflink.com/) as a Staff Frontend Engineer.  
 Now is time to look back and reflect.

@@ -4,6 +4,7 @@ import Footer from "@components/Footer.astro";
 import { Navbar } from "@components/Navbar.tsx";
 import FormattedDate from "@components/FormattedDate.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
 import "../../styles/Theme.css";
 import "../../styles/BlogArticle.css";
@@ -38,7 +39,19 @@ const { Content } = await post.render();
       >
         <FormattedDate date={post.data.date} />
       </div>
-      <h1 class="mt-2 text-4xl text-slate-200">{post.data.title}</h1>
+      <h1 class="mb-10 mt-2 text-4xl text-slate-200">{post.data.title}</h1>
+
+      {
+        post.data.heroImage && (
+          <div class="sm:-mx-12">
+            <Image
+              src={post.data.heroImage}
+              loading="eager"
+              alt={post.data.heroAlt || ""}
+            />
+          </div>
+        )
+      }
 
       <div
         class="mt-4 max-w-full text-left text-lg font-normal text-slate-200 sm:text-xl"

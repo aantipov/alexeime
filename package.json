@@ -22,7 +22,7 @@
     "@astrojs/react": "^3.0.3",
     "@astrojs/tailwind": "^5.0.1",
     "@fontsource/inter": "^4.5.15",
-    "astro": "^3.2.3",
+    "astro": "^3.3.0",
     "framer-motion": "^10.11.2",
     "npm-check-updates": "^16.10.7",
     "react": "^18.2.0",
