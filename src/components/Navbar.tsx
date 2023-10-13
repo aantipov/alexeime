@@ -10,9 +10,10 @@ const navbarLinks = [
 
 type Props = {
   currentPath: string;
+  children: React.ReactNode;
 };
 
-export const Navbar = (props: Props) => {
+export const NavbarContents = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { currentPath } = props;
   function getActiveLinkClass(path: string) {
@@ -30,13 +31,8 @@ export const Navbar = (props: Props) => {
         >
           <a className="navbar-link" href="/" aria-label="Home">
             <div className="flex grow basis-0 items-center justify-start">
-              <div className="mr-2 text-6xl text-white">
-                <img
-                  src={myImage.src}
-                  width={50}
-                  alt="f4"
-                  className="custom-border-gray  rounded-xl"
-                />
+              <div className="mr-2 w-[50px] text-6xl text-white">
+                {props.children}
               </div>
               <div className="font-['Inter'] text-xl font-bold text-white">
                 Alexey Antipov
