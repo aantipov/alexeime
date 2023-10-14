@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
 ---
 
 <Layout
@@ -34,10 +34,10 @@ const { Content } = await post.render();
     <article
       class="flex w-full flex-col items-center justify-center px-6 text-center sm:px-24 md:w-[800px] xl:w-[900px]"
     >
-      <div
-        class="mt-10 text-sm font-normal text-customGrayText sm:px-48 sm:text-base lg:text-base"
-      >
+      <div class="mt-10 text-sm font-normal text-customGrayText sm:text-base">
         <FormattedDate date={post.data.date} />
+        <span class="mx-3">/</span>
+        {remarkPluginFrontmatter.minutesRead}
       </div>
       <h1 class="mb-10 mt-2 text-4xl text-slate-200">{post.data.title}</h1>
 
