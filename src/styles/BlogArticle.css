@@ -5,11 +5,11 @@
 }
 
 .blog-article h2 {
-  @apply my-6 text-3xl font-bold;
+  @apply my-6 text-2xl font-bold sm:text-3xl;
 }
 
 .blog-article h3 {
-  @apply my-6 text-2xl font-bold;
+  @apply my-6 text-xl font-bold sm:text-2xl;
 }
 
 .blog-article ul {
