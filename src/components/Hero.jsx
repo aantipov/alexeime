@@ -151,6 +151,65 @@ export const Hero = () => {
             </ul>
           </div>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="mb-6 mt-2 text-sm font-bold text-customSecondary sm:mt-32 sm:text-base">
+            Check out my work
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 10, zIndex: 20 }}
+          animate={{ opacity: 1, y: 0, zIndex: 20 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+        >
+          <div className="px-8 text-5xl font-bold tracking-wide text-white sm:px-8  sm:text-6xl  md:px-20 lg:px-4 lg:text-7xl xl:text-7xl">
+            <span className="inline">My projects</span>
+          </div>
+          <div>
+            {/* Add section with two columns for large screens and one column for smaller screens */}
+            <div className="mt-4 px-12 text-sm text-customGrayText sm:mt-10 sm:px-48 sm:text-base lg:text-base xl:text-lg ">
+              I love creating web apps. Here are some of my projects:
+            </div>
+          </div>
+          <div className="mb-24 mt-10 px-12 text-sm text-customGrayText sm:mb-32 sm:px-48 sm:text-base lg:text-base xl:text-lg">
+            <ul className="text-xl text-white">
+              <li>
+                <a href="https://masya.dev/" className="underline">
+                  Masya.dev
+                </a>
+                <br />
+                <span className="text-sm text-customGrayText lg:text-lg">
+                  An AI-powered UI generation tool for rapid prototyping
+                </span>
+              </li>
+              <li className="pt-6">
+                <a href="https://moiva.io/" className="underline">
+                  Moiva.io
+                </a>
+                <br />
+                <span className="text-sm text-customGrayText lg:text-lg">
+                  A handy npm package comparison tool. ideal for developers
+                  seeking the right tools for their projects.
+                </span>
+              </li>
+              <li className="pt-6">
+                <a
+                  href="https://notion-google-tasks-sync.com/"
+                  className="underline"
+                >
+                  notion-google-tasks-sync.com
+                </a>
+                <br />
+                <span className="text-sm text-customGrayText lg:text-lg">
+                  A two-way syncing service between Notion and Google Tasks.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
