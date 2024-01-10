@@ -4,7 +4,7 @@ date: 2024-01-10
 summary: Unlock the potential of storing JSON data in SQL databases. Learn from a real-world implementation in the Notion-Gtasks Sync app.
 desc: Unlock the potential of storing JSON data in SQL databases. Learn from a real-world implementation in the Notion-Gtasks Sync app.
 image: ./og.png
-heroImage: ./og.png
+heroImage: ./hero.png
 heroAlt: "SQL database plus JSON document equals enhanced data processing capability"
 ---
 
