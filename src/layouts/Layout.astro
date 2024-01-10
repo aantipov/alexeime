@@ -60,6 +60,14 @@ const today = new Date();
     <title>{title}</title>
     <meta name="description" content={desc} />
 
+    <!-- RSS -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for alexei.me/blog/"
+      href="/rss.xml"
+    />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
