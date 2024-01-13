@@ -1,7 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
-import Navbar from "@/components/Navbar.astro";
+import Navbar from "@/components/Navbar/Navbar.astro";
+import Subscribe from "@/components/Subscribe.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import { Image } from "astro:assets";
@@ -28,36 +29,46 @@ const { Content, remarkPluginFrontmatter } = await post.render();
 >
   <Navbar />
   <main
-    class="blog-article flex w-screen items-center justify-center bg-customDarkBg1 pb-24 pt-16 sm:pb-32 md:pb-44 md:pt-16 lg:pb-24 lg:pt-24"
+    class="blog-article w-screen bg-customDarkBg1 pb-16 pt-16 md:pb-24 md:pt-16"
   >
-    <article
-      class="flex w-full flex-col items-center justify-center px-6 text-center sm:px-0 md:w-[700px]"
-    >
-      <div class="mt-10 text-sm font-normal text-customGrayText sm:text-base">
-        <FormattedDate date={post.data.date} />
-        <span class="mx-3">/</span>
-        {remarkPluginFrontmatter.minutesRead}
-      </div>
-      <h1 class="mb-10 mt-2 text-4xl text-slate-200">{post.data.title}</h1>
+    <div class="mx-auto w-full md:w-[700px]">
+      <article
+        class="flex flex-col items-center justify-center px-6 text-center sm:px-0"
+      >
+        <div class="mt-10 text-sm font-normal text-customGrayText sm:text-base">
+          <FormattedDate date={post.data.date} />
+          <span class="mx-3">/</span>
+          {remarkPluginFrontmatter.minutesRead}
+        </div>
+        <h1 class="mb-10 mt-2 text-4xl text-slate-200">{post.data.title}</h1>
 
-      {
-        post.data.heroImage && (
-          <div class="sm:-mx-12">
-            <Image
-              src={post.data.heroImage}
-              loading="eager"
-              alt={post.data.heroAlt || ""}
-            />
-          </div>
-        )
-      }
+        {
+          post.data.heroImage && (
+            <div class="sm:-mx-12">
+              <Image
+                src={post.data.heroImage}
+                loading="eager"
+                alt={post.data.heroAlt || ""}
+              />
+            </div>
+          )
+        }
+
+        <div
+          class="mt-4 max-w-full text-left text-lg font-normal text-slate-200 sm:text-xl"
+        >
+          <Content />
+        </div>
+      </article>
 
       <div
-        class="mt-4 max-w-full text-left text-lg font-normal text-slate-200 sm:text-xl"
+        class="mx-auto my-5 w-[80%] border-t border-[rgb(255,255,255,0.2)] md:my-20"
       >
-        <Content />
+        <!-- Separator -->
       </div>
-    </article>
+
+      <Subscribe />
+    </div>
   </main>
   <Footer />
 </Layout>

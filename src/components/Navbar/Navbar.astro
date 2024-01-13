@@ -1,0 +1,40 @@
+---
+import { HamburgerMenu } from "@/components/Navbar/HamburgerMenu";
+import NavbarLinks from "./NavbarLinks.astro";
+import { Image } from "astro:assets";
+import avatar from "@assets/images/me.jpg";
+---
+
+<nav
+  class="fixed z-40 flex h-20 w-full flex-col items-center justify-center bg-customDarkBg1 lg:bg-customDarkBgTransparent lg:backdrop-blur-xl"
+>
+  <div
+    class="relative flex w-11/12 items-center justify-between xl:w-10/12 2xl:w-[1280px]"
+  >
+    <div>
+      <a class="navbar-link" href="/" aria-label="Home">
+        <div class="flex grow basis-0 items-center justify-start">
+          <div class="mr-2 w-[50px] text-6xl text-white">
+            <Image
+              src={avatar}
+              width={100}
+              alt="picture of me"
+              loading="eager"
+              class="custom-border-gray h-full w-full rounded-xl object-contain"
+            />
+          </div>
+          <div class="font-['Inter'] text-xl font-bold text-white">
+            Alexey Antipov
+          </div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <div class="hidden h-full items-end pb-2 pl-12 lg:flex">
+        <NavbarLinks />
+      </div>
+
+      <HamburgerMenu client:load currentPath={Astro.url.pathname} />
+    </div>
+  </div>
+</nav>

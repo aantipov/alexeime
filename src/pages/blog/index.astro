@@ -1,8 +1,9 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Subscribe from "@/components/Subscribe.astro";
 import Footer from "@components/Footer.astro";
 import FormattedDate from "@components/FormattedDate.astro";
-import Navbar from "@/components/Navbar.astro";
+import Navbar from "@/components/Navbar/Navbar.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
@@ -17,12 +18,11 @@ const posts = (await getCollection("blog")).sort(
 >
   <Navbar />
   <main
-    class="flex w-screen items-center justify-center bg-customDarkBg1 pb-24 pt-16 sm:pb-32 md:pb-44 md:pt-16 lg:pb-24 lg:pt-24"
+    class="w-screen bg-customDarkBg1 pb-24 pt-16 sm:pb-32 md:pb-44 md:pt-16 lg:pb-24 lg:pt-24"
   >
     <section
-      class="flex w-full flex-col items-center justify-center text-center md:w-[800px]"
+      class="mx-auto flex w-full flex-col items-center justify-center text-center md:w-[800px]"
     >
-      <h1 class="mt-16 text-4xl text-slate-200">Posts</h1>
       {
         posts.map((post) => (
           <article class="mb-8 text-sm font-bold sm:mt-4 sm:text-base">
@@ -44,6 +44,10 @@ const posts = (await getCollection("blog")).sort(
         ))
       }
     </section>
+
+    <div class="mt-14">
+      <Subscribe />
+    </div>
   </main>
   <Footer />
 </Layout>
