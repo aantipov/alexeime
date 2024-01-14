@@ -200,7 +200,7 @@ export const Hero = () => {
                   href="https://notion-google-tasks-sync.com/"
                   className="underline"
                 >
-                  notion-google-tasks-sync.com
+                  Notion-Google Tasks Sync
                 </a>
                 <br />
                 <span className="text-sm text-customGrayText lg:text-lg">
