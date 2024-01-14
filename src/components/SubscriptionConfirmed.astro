@@ -1,0 +1,56 @@
+---
+
+---
+
+<!-- Snackbar container -->
+<div
+  id="snackbar"
+  class="fixed inset-x-0 top-16 z-50 hidden cursor-default justify-center opacity-0 transition-all duration-300"
+>
+  <!-- Snackbar -->
+  <div
+    class="m-4 rounded-md border border-gray-200 bg-white px-4 py-3 text-gray-800 shadow-lg"
+    onclick="document.getElementById('snackbar').style.display='none';"
+  >
+    <div class="flex items-center justify-between">
+      <span class="hidden md:inline"
+        >Subscription Confirmed! Happy reading and thanks for joining.</span
+      >
+      <div class="font-semibold md:hidden">
+        <div>Subscription Confirmed!</div>
+        <div>Happy reading and thanks for joining.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showSnackbar() {
+    let snackbar = document.getElementById("snackbar");
+    snackbar!.style.opacity = "1";
+    snackbar!.style.display = "flex";
+  }
+
+  function closeSnackbar() {
+    let snackbar = document.getElementById("snackbar");
+    snackbar!.style.opacity = "0";
+
+    // Wait for the transition to finish before hiding the snackbar
+    setTimeout(() => {
+      snackbar!.style.display = "none";
+    }, 300);
+  }
+
+  // Wait for the DOM to load
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const subscribeSuccess = urlParams.has("subscribe-success");
+
+    if (subscribeSuccess) {
+      showSnackbar();
+    }
+
+    // Automatically dismiss the snackbar with animation after 3 seconds
+    setTimeout(closeSnackbar, 3000);
+  });
+</script>
