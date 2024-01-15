@@ -122,7 +122,7 @@ export const Hero = () => {
           <div className="mb-24 mt-10 px-12 text-sm text-customGrayText sm:mb-32 sm:px-48 sm:text-base lg:text-base xl:text-lg">
             <ul className="text-xl text-white">
               <li>
-                <span className="font-bold">On Twitter</span>:&nbsp;
+                <span className="font-bold">Twitter</span>:&nbsp;
                 <a
                   href="https://twitter.com/_aantipov"
                   target="_blank"
@@ -133,7 +133,7 @@ export const Hero = () => {
                 </a>
               </li>
               <li className="pt-3">
-                <span className="font-bold">On Linkedin</span>:&nbsp;
+                <span className="font-bold">Linkedin</span>:&nbsp;
                 <a
                   href="https://www.linkedin.com/in/aantipov/"
                   target="_blank"
@@ -145,7 +145,7 @@ export const Hero = () => {
               </li>
               <li className="bold pt-3">
                 <a href="/blog/" className="font-bold underline">
-                  On my Blog
+                  my Blog
                 </a>
               </li>
             </ul>
