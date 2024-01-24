@@ -82,5 +82,3 @@ WHERE ...
 In certain situations it might not be performant to use json functions in WHERE or SELECT clauses. To mitigate that performance issue one might create a computed (generated) column to store the extracted value. Computed columns can also be indexed to further improve query performance. It is not needed in my case, so I keep it simple.
 
 Hope my findings can be useful to some.
-
-<!-- If there are SQL veterans out there who notice issues with my approach and/or have suggestions, I’m keen to know and learn from you - please provide your opinion and share your experience working with JSON functions. -->
