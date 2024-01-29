@@ -1,7 +1,7 @@
 ---
 title: "A Tribute to React"
 date: 2024-01-29
-summary: React faced a surge of criticism over the past year. Amidst this, people often exaggerated issues and ignored or diminished the objective true value of React. In the article, I'm highlighting an aspect of React that has been either overlooked or taken for granted, yet greatly contributed to its success.
+summary: React was facing a surge of criticism over the past year. Amidst this, people often exaggerated issues and ignored or diminished the objective true value of React. In the article, I'm highlighting an aspect of React that has been either overlooked or taken for granted, yet greatly contributed to its success.
 desc: React faced a surge of criticism over the past year. Amidst this, people often exaggerated issues and ignored or diminished the objective true value of React. In the article, I'm highlighting an aspect of React that has been either overlooked or taken for granted, yet greatly contributed to its success.
 image: ./og.png
 heroImage: ./og.png
