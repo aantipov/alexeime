@@ -9,7 +9,7 @@ image: ./og.png
 import { Image } from "astro:assets";
 import sentryLookupImg from "./sentry-lookup.png";
 
-**TLDR**: Sentry has come up with a simple and reliable way to associate production code with source maps and set it working. No excuses for not using source maps anymore.
+**TLDR**: [Sentry](https://sentry.io/) has come up with a simple and reliable way to associate production code with source maps and set it working. No excuses for not using source maps anymore.
 
 Around this time a year ago I was busy finding my way around a proper observability setup for Flink’s (my employer at that time) microfrontends. The main hurdle was dealing with source maps in [Datadog](https://www.datadoghq.com/) (an observability tool) which hadn’t supported microfrontends natively and I was looking for a workaround.
 
@@ -54,7 +54,7 @@ Beside that problem with reliability, such approach also doesn’t fit the use c
 
 ### Debug IDs to the Rescue!
 
-[Sentry](https://sentry.io/) has come up with a really neat and elegant solution to the above problems.
+Sentry has come up with a really neat and elegant solution to the above problems.
 Instead of generating releases and assigning them when uploading source-maps and initialising the application, one simply includes an additional post-bundling step - running the command
 
 ```bash
