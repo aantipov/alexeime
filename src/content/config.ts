@@ -10,10 +10,12 @@ const blogCollection = defineCollection({
       image: image().refine((img) => img.width >= 500, {
         message: "Cover/og image must be at least 500 pixels wide!",
       }),
-      heroImage: image().refine((img) => img.width >= 500, {
-        message: "Cover image must be at least 500 pixels wide!",
-      }),
-      heroAlt: z.string(),
+      heroImage: image()
+        .refine((img) => img.width >= 500, {
+          message: "Cover image must be at least 500 pixels wide!",
+        })
+        .optional(),
+      heroAlt: z.string().optional(),
     }),
 });
 
